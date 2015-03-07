@@ -9,155 +9,16 @@
     <script src="bower_components/Bootflat/js/jquery-1.10.1.min.js"></script>
     <script src="bower_components/Bootflat/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-    <script src="app/main/config.js"></script>
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
+    <script src="app/main/config.js"></script>
 </head>
 
-<body>
-    <nav navigation class="navbar navbar-default navCust">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Pttr</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Mission</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Log In</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="" id="landing">
-        <div class="overlay">
-            <div class="landingContent">
-                <h1>Pttr <br><img class="logo" src="images/pttrLogo.png"></h1>
-                <h2>Match.com for Owners and Pets</h2>
-            </div>
-            <div class="landingContainer">
-                <p class="arrow">
-                    <a data-scroll href="#mission">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="mainContent" id="mission">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="header_blk">
-                        <h1 class="wow fadeIn" data-wow-duration="3s">Mission</h1>
-                    </div>
-                    <div class="p_blck wow fadeIn" data-wow-duration="3s">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="pg_img_blk">
-                        <img class="imgCust wow fadeIn" data-wow-duration="3s" src="images/sadGif.gif">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mainContent" id="pttrInfo">
-        </div>
-        <div class="container containerPttr">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="wow slideInLeft" data-wow-duration="2s">
-                        <div class="carouselContainer">
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol>
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="images/animal1.jpg" class="img-responsive center-block" alt="sadDog">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/animal2.jpg" class="img-responsive center-block" alt="sad_dog">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/animal3.jpg" class="img-responsive center-block" alt="sad_cat">
-                                        <div class="carousel-caption">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="header_blk">
-                        <h1 class="wow slideInRight" data-wow-duration="2s">How Pttr Works</h1>
-                    </div>
-                    <div class=" p_blck wow slideInRight" data-wow-duration="2s" class="p_blck">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blan ditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mainContent wow flipInX" data-wow-duration="3s" id="signUp">
-        <div class="container" id="signUp">
-            <div class="header_blk">
-                <h1>Sign Up</h1>
-            </div>
-            <div class="subCont">
-                <p>
-                    Give these pets a new home, whether your trading in your pet or you're considering adoption. Our site offers distinct avenues that will help you find someone/organization in your area who has the perfect pet for you.
-                </p>
-            </div>
-            <div id="sign_Btn_Blk">
-                <button class="btn btn-large orgButton" data-toggle="tooltip" data-placement="top" title="Organization Sign up">Organization</button>
-                <button class="btn btn-large indButton" data-toggle="tooltip" data-placement="top" title="Users Sign up">Individual</button>
-            </div>
-        </div>
-    </section>
+<body ng-app="pttr">
+    <ui-view></ui-view>
     <footer class="footCust clearfix">
         <h4>Pttr</h4>
         <ul class="listLeft">

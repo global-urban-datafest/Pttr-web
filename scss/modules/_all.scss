@@ -1,4 +1,8 @@
 @import 'landingpage';
 @import 'view';
-@import 'ilogin';
+@import 'ilogin'; 
+@import 'dashboard';
 @import 'animate';
+body {
+    overflow-x: hidden;
+}
