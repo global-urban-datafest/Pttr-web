@@ -38,6 +38,23 @@ section{
 	position: absolute;
 	color: #CEDBF0;
 	text-align:center
+	position:absolute;
+}
+
+.glyphicon-chevron-down{
+	font-size:76px;
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.arrow{
+	width:100px;
+	height:100px;
+	text-align:center;
+	border: solid 3px #CEDBF0;
+	border-radius:50%;
 }
 
 .header_blk{
