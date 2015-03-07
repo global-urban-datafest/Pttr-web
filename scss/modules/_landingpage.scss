@@ -10,16 +10,32 @@ body,html{
 section{
 	position: relative;
 	width: 100%;
+	padding-top: 10%;
 }
 #landing{
 	background:url('../images/landingGif.gif')center center no-repeat;
 	@include background-size(cover);
 	@include SameWidthHeight(100%);
 }
-.overlay{
-	@extend %overlay;
-}
 .pg_img_blk{
 	@include SameWidthHeight(100%);
 	@extend %flexCenter; 
+}
+.header_blk{
+	h1{
+		text-align:center;	
+	}
+}
+.p_blck{
+	@include paddingLR(4%);
+	p:first-child:first-letter{
+		float: left;
+	    color: rgba(3, 29, 54, 1);
+	    font-size: 50px;
+	    line-height: 40px;
+	    padding-top: 4px;
+	    padding-right: 8px;
+	    padding-left: 3px;
+	    font-family: Georgia;
+	}
 }

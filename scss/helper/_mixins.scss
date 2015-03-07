@@ -13,4 +13,8 @@
 	@include SameWidthHeight(100%);
 	background: $color;
 }
+@mixin paddingLR($same){
+	padding-left:$same;
+	padding-right:$same;
+}
 
