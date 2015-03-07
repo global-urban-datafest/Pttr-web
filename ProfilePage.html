@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Pttr - Love an animal, Save a life</title>
+    <meta name="description" content="Pttr is the Match.com for stray animals and animal lovers. Love an animal, save a life">
+    <link rel="stylesheet" type="text/css" href="bower_components/Bootflat/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/format.css">
+    <script src="bower_components/Bootflat/js/jquery-1.10.1.min.js"></script>
+    <script src="bower_components/Bootflat/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="app/main/config.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body id="profilePage">
+    <!-- the important part is the content ... this should be a view page in angular but idk how you set it up alistair. -->
+    <div navigation id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a>
+            </li>
+            <li><a href="#about">About</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a>
+                    </li>
+                    <li><a href="#">Another action</a>
+                    </li>
+                    <li><a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a>
+                    </li>
+                    <li><a href="#">One more separated link</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="img_blk">
+                    <img src="images/sad_dog.jpg" class="img-responsive center-block" alt="">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input_blk">
+                            <label for="fname">FirstName:</label>
+                            <input hide type="text" id="fname" placeholder="FirstName:">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input_blk">
+                            <label for="lname">LastName:</label>
+                            <input type="text" id="lname" placeholder="LastName:">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="addr_blk">
+                            <label for="address">Address:</label>
+                            <textarea name="" id="address" placeholder="Address:" maxlength="140"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="bio_blk">
+                    <label for="userbio">Biography:</label>
+                    <textarea name="" id="userbio" rows="5" placeholder="Biography:" maxlength="250"></textarea>
+                </div>                
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input_blk">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" placeholder="City:">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input_blk">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" placeholder="State:">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input_blk">
+                            <label for="zip">Zipcode:</label>
+                            <input type="text" id="zip" placeholder="Zip:">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input_blk">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" placeholder="Email:">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input_blk">
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" placeholder="Phone:">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_blk">
+            <button class="btn btn-lg" ngClick()>Edit</button>
+            <button class="btn btn-lg" ngClick()>Save</button>
+        </div>
+    </div>
+    <footer class="">
+
+    </footer>
+</body>
+<!-- example to disable the views when the user clicks on save
+it can be enabled and reenabled by ngClick() -->
+<!-- <div ng-init="isDisabled = false">
+ <button disabled="{{isDisabled}}">Disabled</button>
+</div> -->
+</html>

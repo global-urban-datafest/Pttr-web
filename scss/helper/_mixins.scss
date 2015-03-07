@@ -17,4 +17,9 @@
 	padding-left:$same;
 	padding-right:$same;
 }
+@mixin paddingTB($same){
+	padding-top:$same;
+	padding-bottom:$same;
+}
+
 

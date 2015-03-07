@@ -13,6 +13,7 @@
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="app/main/config.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                 <h1>Pttr</h1>
                 <h2>Match.com for Owners and Pets</h2>
                 <p class="arrow">
-                <span class="glyphicon glyphicon-chevron-down"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                 </p>
             </div>
         </div>
@@ -76,48 +77,82 @@
             </div>
         </div>
     </section>
+    <hr>
     <section class="mainContent" id="pttrInfo">
         <div class="header_blk">
-            <h1><ul>Mission</ul></h1>
+            <h1><u>PTTR</u></h1>
         </div>
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="carouselContainer">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="images/sad_dog" alt="...">
-                    <div class="carousel-caption">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/sad_dog.jpg" class="img-responsive center-block" alt="sadDog">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/sad_dog2.jpg" class="img-responsive center-block" alt="sad_dog">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/sad_cat.jpg" class="img-responsive center-block" alt="sad_cat">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="..." alt="...">
-                    <div class="carousel-caption">
+                <div class="col-sm-5">
+                    <div class="p_blck">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blan ditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et ea illo aliquam quisquam est nesciunt commodi nisi velit facere ipsam nobis dolor, totam tempore voluptas provident blanditiis minima error.
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
+    <hr>
     <section class="mainContent" id="signUp">
-        <h4>Sign Up</h4>
-        <hr>
+        <div class="container">
+            <div class="header_blk">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="subCont">
+                <p>
+                    Give these pets a new home, whether your trading in your pet or you're considering adoption. Our site offers distinct avenues that will help you find someone/organization in your area who has the perfect pet for you.
+                </p>
+            </div>
+            <div id="sign_Btn_Blk">
+                <button class="btn btn-large" data-toggle="tooltip" data-placement="top" title="Search local shelters for the pet you're looking for">Shelter</button>
+                <button class="btn btn-large" data-toggle="tooltip" data-placement="top" title="Search the list of users who are trading or selling their pets">Finder</button>
+            </div>
+        </div>
     </section>
     <footer class="">
-
+        
     </footer>
 </body>
 
