@@ -31,45 +31,45 @@ section {
     @include SameWidthHeight(100%);
     position: relative;
 }
-.landingContainer{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	display:flex;
-	justify-content:center;
+.landingContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .arrow {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        border: solid 2px #CEDBF0;
+        border-radius: 50%;
+        .glyphicon-chevron-down {
+            font-size: 76px;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-right: 5.5px;
+        }
+    }
 }
-.landingContent{
-	position:absolute;
-	top:25%;
-	width:100%;
-	h1,h2{
-		text-align:center;
-		color: #CEDBF0;
-	}
-}
-.glyphicon-chevron-down {
-    font-size: 76px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-right: 5.5px;
-}
-.arrow {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: solid 2px #CEDBF0;
-    border-radius: 50%;
+.landingContent {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    h1, h2 {
+        text-align: center;
+        color: #CEDBF0;
+    }
 }
 .pg_img_blk {
     @include SameWidthHeight(100%);
     @extend %flexCenter;
+    padding-top: 5%;
 }
-.imgCust{
-	width:300px;
-	height:300px;
-	@include border-radius(50%);
+.imgCust {
+    @include SameWidthHeight(300px);
+    @include border-radius(50%);
 }
 .header_blk {
     h1 {
@@ -79,30 +79,30 @@ section {
 #pttrInfo {
     .header_blk {
         h1 {
-            text-align: right;
+            text-align: center;
         }
-        padding-right: 20%;
         padding-bottom: 2%;
     }
     .carouselContainer {
         @include paddingLR(6%);
+        padding-top:6%;
     }
     img {
         width: 100%;
         height: 370px;
     }
-}
-.p_blck {
-    @include paddingLR(4%);
-    p:first-child:first-letter {
-        float: left;
-        color: rgba(3, 29, 54, 1);
-        font-size: 50px;
-        line-height: 40px;
-        padding-top: 4px;
-        padding-right: 8px;
-        padding-left: 3px;
-        font-family: Georgia;
+    .p_blck {
+        @include paddingLR(4%);
+        p:first-child:first-letter {
+            float: left;
+            color: rgba(3, 29, 54, 1);
+            font-size: 50px;
+            line-height: 40px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+            font-family: Georgia;
+        }
     }
 }
 #sign_Btn_Blk {
@@ -131,16 +131,16 @@ section {
     .input_blk {
         padding-top: 25%;
         @include paddingLR(5%);
-  }
-}
-#bio_blk, #addr_blk {
-    textarea {
-        width: 100%;
-        @extend %border_box;
-        resize: none;
-  }
-    width:100%;
-    padding-top: 10%;
+    }
+    #bio_blk, #addr_blk {
+        textarea {
+            width: 100%;
+            @extend %border_box;
+            resize: none;
+        }
+        width:100%;
+        padding-top: 10%;
+    }
 }
 .btn_blk {
     margin-top: 5%;
@@ -158,19 +158,20 @@ section {
     .question_blk {
         width: 100%;
     }
-
 }
 .left{
 background-color:#1E5699;
 color:#CEDBF0;
 }
-
-
 .right{
 background-color:yellow;
 }
+
 .containerPttr{
 	@include gradient(145deg, #1E5699, 10%, #9C656D, 90%);
+
+navCust{
+	margin-botton:0;
 }
 .footCust{
 	background-color: #1E5699;
