@@ -114,17 +114,30 @@ section {
         padding-top: 25%;
         @include paddingLR(5%);
     }
-    #bio_blk, #addr_blk{
-        textarea{
-        	width: 100%;
-	 		@extend %border_box;
-	 		resize: none;	 		
+    #bio_blk, #addr_blk {
+        textarea {
+            width: 100%;
+            @extend %border_box;
+            resize: none;
         }
         width:100%;
         padding-top: 10%;
     }
-    .btn_blk{
-    	margin-top:5%;
+    .btn_blk {
+        margin-top: 5%;
     }
 }
-
+#searchPreference {
+    padding-top: 10%;
+    .header_blk {
+        font-size: 10vw;
+    }
+    textarea {
+        width: 50%;
+        @extend %border_box;
+        resize: none;
+    }
+    .question_blk{
+    	width: 100%;
+    }
+}
