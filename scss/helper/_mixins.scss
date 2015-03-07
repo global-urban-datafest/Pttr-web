@@ -13,4 +13,8 @@
 @mixin overlay($a, $b, $c, $d){
 	background: hsla($a, $b, $c, $d);
 }
+@mixin paddingLR($same){
+	padding-left:$same;
+	padding-right:$same;
+}
 
