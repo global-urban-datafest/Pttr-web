@@ -15,7 +15,7 @@ section {
     width: 100%;
 }
 .mainContent {
-    padding-top: 7%;
+    padding-top: 2%;
 }
 #landing {
     background: url('../images/landingGif.gif')center center no-repeat;
@@ -85,7 +85,7 @@ section {
             text-align: right;
         }
         padding-right: 20%;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
     }
     .carouselContainer {
         @include paddingLR(6%);
