@@ -7,7 +7,7 @@ body, html {
     top: 0;
     background-color: black;
     border: solid 1px black;
-    z-index: 100;
+    z-index: 100; 
     width: 100%;
 }
 section {
@@ -153,4 +153,11 @@ section {
     .question_blk {
         width: 100%;
     }
+}
+.left{
+background-color:#1E5699;
+color:#CEDBF0;
+}
+.right{
+background-color:yellow;
 }
