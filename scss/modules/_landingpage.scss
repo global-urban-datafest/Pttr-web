@@ -27,25 +27,21 @@ section {
     @include SameWidthHeight(100%);
     position: relative;
 }
-
-.landingContainer {
-    z-index: 75;
-    width: 50%;
-    height: 50%;
-    margin-top: 20%;
-    margin-left: 25%;
-    margin-right: 25%;
-    position: absolute;
+.landingContainer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display:flex;
+	justify-content:center;
 }
-.landingContent {
-    z-index: 39;
-    width: 80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #CEDBF0;
-    text-align: center;
-    position: relative;
+.landingContent{
+	position:absolute;
+	top:25%;
+	width:100%;
+	h1,h2{
+		text-align:center;
+		color: #CEDBF0;
+	}
 }
 .glyphicon-chevron-down {
     font-size: 76px;
@@ -54,30 +50,23 @@ section {
     margin-right: auto;
     text-align: center;
     margin-right: 5.5px;
-
 }
 .arrow {
-    margin: 20%;
     width: 100px;
     height: 100px;
     text-align: center;
-    border: solid 3px #CEDBF0;
+    border: solid 2px #CEDBF0;
     border-radius: 50%;
-    margin: 20% auto 0 auto;
-    position: absolute;
 }
-
 .pg_img_blk {
     @include SameWidthHeight(100%);
     @extend %flexCenter;
 }
-
 .imgCust{
 	width:300px;
 	height:300px;
 	@include border-radius(50%);
 }
-
 .header_blk {
     h1 {
         text-align: center;
@@ -140,7 +129,6 @@ section {
         @include paddingLR(5%);
   }
 }
-
 #bio_blk, #addr_blk {
     textarea {
         width: 100%;
@@ -150,11 +138,9 @@ section {
     width:100%;
     padding-top: 10%;
 }
-
 .btn_blk {
     margin-top: 5%;
 }
-
 #searchPreference {
     padding-top: 10%;
     .header_blk {
@@ -168,13 +154,15 @@ section {
     .question_blk {
         width: 100%;
     }
+
 }
 .left{
 background-color:#1E5699;
 color:#CEDBF0;
 }
+
+
 .right{
 background-color:yellow;
 }
-
 
