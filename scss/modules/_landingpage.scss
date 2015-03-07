@@ -12,12 +12,28 @@ body a:hover {
 .navbar {
     position: fixed;
     top: 0;
-    background-color: black;
-    border: solid 1px black;
+    background-color: white;
+    border: solid 1px #CEDBF0;
     z-index: 100;
     width: 100%;
     @include border-radius(0);
 }
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a{
+    color:#1E5699;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-link, .navbar-default .btn-link{
+    color:#1E5699;
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    border:solid 3px #EDDA91;
+    text-align:center;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover{
+    color:#2D81E5;
+}
+
+
 section {
     position: relative;
     width: 100%;
@@ -153,7 +169,6 @@ navCust {
 .footCust {
     background-color: #1E5699;
     color: #CEDBF0;
-    margin-bottom: 0;
 }
 .orgButton {
     background-color: #1E5699;
@@ -180,6 +195,7 @@ navCust {
 }
 .listLeft {
     list-style: none;
+    margin: 10px 10px;
     display: inline-block;
     float: left; 
 }
@@ -188,7 +204,15 @@ navCust {
     width: 100px;
 }
 .listRight {
+    margin: 10px 10px;
     list-style: none;
     display: inline-block;
     float: right;
 }
+#signUp {
+    min-height: 300px;
+}
+.containerPttr { 
+    overflow: none;
+}
+ 
