@@ -2,6 +2,8 @@ body, html {
     width: 100%;
     height: 100%;
     padding-top:26px;
+    margin-bottom:0;
+    padding-bottom:0;
 }
 .navbar {
     position: fixed;
@@ -167,6 +169,13 @@ color:#CEDBF0;
 .right{
 background-color:yellow;
 }
-navCust{
-	margin-botton:0;
+.containerPttr{
+	@include gradient(145deg, #1E5699, 10%, #9C656D, 90%);
 }
+.footCust{
+	background-color: #1E5699;
+	color:#CEDBF0
+	margin-bottom:0;
+}
+
+
