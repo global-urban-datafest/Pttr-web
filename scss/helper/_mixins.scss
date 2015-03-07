@@ -1,11 +1,25 @@
 @mixin background-size($size){
-	-webkit-border-background-size:$size;
-	   -moz-border-background-size:$size;
-		-ms-border-background-size:$size;
-		 -o-border-background-size:$size;
-		    border-background-size:$size;
+	-webkit-background-size:$size;
+	   -moz-background-size:$size;
+		-ms-background-size:$size;
+		 -o-background-size:$size;
+		    background-size:$size;
 }
 @mixin SameWidthHeight($x){
 	width: $x;
 	height: $x;
 }
+
+@mixin overlay($a, $b, $c, $d){
+	background: hsla($a, $b, $c, $d);
+}
+@mixin paddingLR($same){
+	padding-left:$same;
+	padding-right:$same;
+}
+@mixin paddingTB($same){
+	padding-top:$same;
+	padding-bottom:$same;
+}
+
+
