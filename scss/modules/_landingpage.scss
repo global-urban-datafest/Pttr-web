@@ -1,21 +1,23 @@
 body, html {
     width: 100%;
     height: 100%;
+    padding-top:26px;
 }
-#navbar {
+.navbar {
     position: fixed;
     top: 0;
     background-color: black;
     border: solid 1px black;
-    z-index: 100;
+    z-index: 100; 
     width: 100%;
+    @include border-radius(0);
 }
 section {
     position: relative;
     width: 100%;
 }
 .mainContent {
-    padding-top: 7%;
+    padding-top: 2%;
 }
 #landing {
     background: url('../images/landingGif.gif')center center no-repeat;
@@ -27,52 +29,45 @@ section {
     @include SameWidthHeight(100%);
     position: relative;
 }
+.landingContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .arrow {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        border: solid 2px #CEDBF0;
+        border-radius: 50%;
+        .glyphicon-chevron-down {
+            font-size: 76px;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-right: 5.5px;
+        }
+    }
+}
+.landingContent {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    h1, h2 {
+        text-align: center;
+        color: #CEDBF0;
+    }
+}
 .pg_img_blk {
     @include SameWidthHeight(100%);
     @extend %flexCenter;
+    padding-top: 5%;
 }
-
-.imgCust{
-	width:300px;
-	height:300px;
-	@include border-radius(50%);
-}
-
-.landingContainer {
-    z-index: 75;
-    width: 50%;
-    height: 50%;
-    margin-top: 20%;
-    margin-left: 25%;
-    margin-right: 25%;
-    position: absolute;
-}
-.landingContent {
-    z-index: 39;
-    width: 80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #CEDBF0;
-    text-align: center;
-    position: relative;
-}
-.glyphicon-chevron-down {
-    font-size: 76px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-right: 5.5px;
-}
-.arrow {
-    margin: 20%;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: solid 3px #CEDBF0;
-    border-radius: 50%;
-    margin: 20% auto 0 auto;
+.imgCust {
+    @include SameWidthHeight(300px);
+    @include border-radius(50%);
 }
 .header_blk {
     h1 {
@@ -82,30 +77,30 @@ section {
 #pttrInfo {
     .header_blk {
         h1 {
-            text-align: right;
+            text-align: center;
         }
-        padding-right: 20%;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
     }
     .carouselContainer {
         @include paddingLR(6%);
+        padding-top:6%;
     }
     img {
         width: 100%;
         height: 370px;
     }
-}
-.p_blck {
-    @include paddingLR(4%);
-    p:first-child:first-letter {
-        float: left;
-        color: rgba(3, 29, 54, 1);
-        font-size: 50px;
-        line-height: 40px;
-        padding-top: 4px;
-        padding-right: 8px;
-        padding-left: 3px;
-        font-family: Georgia;
+    .p_blck {
+        @include paddingLR(4%);
+        p:first-child:first-letter {
+            float: left;
+            color: rgba(3, 29, 54, 1);
+            font-size: 50px;
+            line-height: 40px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+            font-family: Georgia;
+        }
     }
 }
 #sign_Btn_Blk {
@@ -134,23 +129,20 @@ section {
     .input_blk {
         padding-top: 25%;
         @include paddingLR(5%);
-  }
+    }
+    #bio_blk, #addr_blk {
+        textarea {
+            width: 100%;
+            @extend %border_box;
+            resize: none;
+        }
+        width:100%;
+        padding-top: 10%;
+    }
 }
-
-#bio_blk, #addr_blk {
-    textarea {
-        width: 100%;
-        @extend %border_box;
-        resize: none;
-  }
-    width:100%;
-    padding-top: 10%;
-}
-
 .btn_blk {
     margin-top: 5%;
 }
-
 #searchPreference {
     padding-top: 10%;
     .header_blk {
@@ -164,4 +156,14 @@ section {
     .question_blk {
         width: 100%;
     }
+}
+.left{
+background-color:#1E5699;
+color:#CEDBF0;
+}
+.right{
+background-color:yellow;
+}
+navCust{
+	margin-botton:0; 
 }
