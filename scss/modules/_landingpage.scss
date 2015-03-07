@@ -1,14 +1,16 @@
 body, html {
     width: 100%;
     height: 100%;
+    padding-top:26px;
 }
-#navbar {
+.navbar {
     position: fixed;
     top: 0;
     background-color: black;
     border: solid 1px black;
     z-index: 100;
     width: 100%;
+    @include border-radius(0);
 }
 section {
     position: relative;
@@ -165,4 +167,6 @@ color:#CEDBF0;
 .right{
 background-color:yellow;
 }
-
+navCust{
+	margin-botton:0;
+}
