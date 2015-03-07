@@ -11,7 +11,10 @@
     gulp.task('sass', function () {
         return gulp.src('scss/**/*.scss')
                     .pipe(plumber())
-                    .pipe(sass({outputStyle: 'compressed'}))
+                    .pipe(sass({
+                        outputStyle: 'compressed',
+                        errLogToConsole: true
+                    }))
                     .pipe(gulp.dest('css'));
     });
 
