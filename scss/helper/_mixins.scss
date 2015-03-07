@@ -1,0 +1,7 @@
+@mixin background-size($size){
+	-webkit-border-background-size:$size;
+	   -moz-border-background-size:$size;
+		-ms-border-background-size:$size;
+		 -o-border-background-size:$size;
+		    border-background-size:$size;
+}
