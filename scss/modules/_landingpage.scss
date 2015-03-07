@@ -1,14 +1,14 @@
 body, html {
     width: 100%;
     height: 100%;
-    padding-top:26px;
-    margin-bottom:0;
-    padding-bottom:0;
+    padding-top: 26px;
 }
-body a, body a:hover, body a:active, body a:visited{
-	color:#CEDBF0;
+body a, body a:active, body a:visited {
+    color: #CEDBF0;
 }
-
+body a:hover {
+    color: white;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -24,6 +24,7 @@ section {
 }
 .mainContent {
     padding-top: 2%;
+    padding-bottom: 2%;
 }
 #landing {
     background: url('../images/landingGif.gif')center center no-repeat;
@@ -57,7 +58,6 @@ section {
         }
     }
 }
-
 .landingContent {
     position: absolute;
     top: 25%;
@@ -73,7 +73,7 @@ section {
     padding-top: 5%;
 }
 .imgCust {
-    @include SameWidthHeight(300px);
+    @include SameWidthHeight(270px);
     @include border-radius(50%);
 }
 .header_blk {
@@ -90,7 +90,7 @@ section {
     }
     .carouselContainer {
         @include paddingLR(6%);
-        padding-top:6%;
+        padding-top: 6%;
     }
     img {
         width: 100%;
@@ -98,8 +98,7 @@ section {
     }
     .p_blck {
         @include paddingLR(4%);
-        text-align:justify;
-
+        text-align: justify;
     }
 }
 #sign_Btn_Blk {
@@ -156,46 +155,55 @@ section {
         width: 100%;
     }
 }
-.left{
-background-color:#1E5699;
-color:#CEDBF0;
+.left {
+    background-color: #1E5699;
+    color: #CEDBF0;
 }
-.right{
-background-color:yellow;
+.right {
+    background-color: yellow;
 }
-
-#pttrInfo{
-	background-color:#1E5699;
-	color:white;
+#pttrInfo {
+    background-color: #1E5699;
+    color: white;
 }
-navCust{
-	margin-botton:0;
+navCust {
+    margin-botton: 0;
 }
-.footCust{
-	background-color: #1E5699;
-	color:#CEDBF0;
-	margin-bottom:0;
+.footCust {
+    background-color: #1E5699;
+    color: #CEDBF0;
+    margin-bottom: 0;
 }
-
-.orgButton{
-	background-color: #1E5699;
-	color:white;
+.orgButton {
+    background-color: #1E5699;
+    color: white;
 }
-.orgButton:hover{
-	background-color:#2D81E5;
-	color:white;
+.orgButton:hover {
+    background-color: #2D81E5;
+    color: white;
 }
-
-.indButton{
-	background-color:white;
-	color:#1E5699;
+.indButton {
+    background-color: white;
+    color: #1E5699;
 }
-.indButton:hover{
-	background-color: #2D81E5;
-	color:white;
+.indButton:hover {
+    background-color: #2D81E5;
+    color: white;
 }
-.logo{
-	height:100px;
-	width:100px;
+.logo {
+    height: 100px;
+    width: 100px;
 }
-
+.right {
+    background-color: white;
+}
+.listLeft {
+list-style:none;
+    display: inline-block;
+    float: left;
+}
+.listRight {
+	list-style:none;
+    display: inline-block;
+    float: right;
+}
