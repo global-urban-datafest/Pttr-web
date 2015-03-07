@@ -5,6 +5,10 @@ body, html {
     margin-bottom:0;
     padding-bottom:0;
 }
+body a, body a:hover, body a:active, body a:visited{
+	color:#CEDBF0;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -53,6 +57,7 @@ section {
         }
     }
 }
+
 .landingContent {
     position: absolute;
     top: 25%;
