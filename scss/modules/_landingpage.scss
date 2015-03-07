@@ -10,3 +10,9 @@ section{
 	position: relative;
 	width: 100%;
 }
+%overlay{
+	@include SameWidthHeight(100%;);
+}
+.overlay{
+	@extend $overlay;
+}
