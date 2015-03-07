@@ -5,3 +5,7 @@
 		 -o-border-background-size:$size;
 		    border-background-size:$size;
 }
+@mixin SameWidthHeight($x){
+	width: $x;
+	height: $x;
+}
