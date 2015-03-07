@@ -28,16 +28,6 @@ section {
     @include SameWidthHeight(100%);
     position: relative;
 }
-.pg_img_blk {
-    @include SameWidthHeight(100%);
-    @extend %flexCenter;
-}
-
-.imgCust{
-	width:300px;
-	height:300px;
-	@include border-radius(50%);
-}
 
 .landingContainer {
     z-index: 75;
@@ -65,6 +55,7 @@ section {
     margin-right: auto;
     text-align: center;
     margin-right: 5.5px;
+
 }
 .arrow {
     margin: 20%;
@@ -74,7 +65,20 @@ section {
     border: solid 3px #CEDBF0;
     border-radius: 50%;
     margin: 20% auto 0 auto;
+    position: absolute;
 }
+
+.pg_img_blk {
+    @include SameWidthHeight(100%);
+    @extend %flexCenter;
+}
+
+.imgCust{
+	width:300px;
+	height:300px;
+	@include border-radius(50%);
+}
+
 .header_blk {
     h1 {
         text-align: center;
