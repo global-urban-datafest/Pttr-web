@@ -2,86 +2,92 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ngRoute', 'pttr.userEntity', 'pttr.individual', 'pttr.shelter', 'pttr.dog']);
+        app = angular.module('pttr', ['ui.router']);
     
-    app.run(['$rootScope', '$location', function ($rootScope, $location) {
+    app.run(['$rootScope', '$state', function ($rootScope, $state) {
+
+        $rootScope.$on("$stateChangeStart", function (event, toState, toParams) {
+            
+        });
         
     }]);
     
-    app.config(['$routeProvider', function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: "js/main/home.html"
+    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        
+        $stateProvider
+            .state('noAuth', {
+                abstract: true,
+                templateUrl: "app/main/menu.html"
             })
-            // UserEntity Module
-            .when('/login/individual', {
-                templateUrl: "js/userEntity/loginIndividual.html",
+            .state('noAuth.home', {
+                url: "/home",
+                templateUrl: "app/main/home.html"
+            })
+            .state('noAuth.contact', {
+                url: "/contact",
+                templateUrl: "app/main/contact.html"
+            })
+            .state('noAuth.loginIndividual', {
+                url: "/login/individual",
+                templateUrl: "app/userEntity/loginIndividual.html",
                 controller: "LoginIndividualCtrl"
             })
-            .when('/login/animalShelter', {
-                templateUrl: "js/userEntity/loginShelter.html",
+            .state('noAuth.loginShelter', {
+                url: "/login/shelter",
+                templateUrl: "app/userEntity/loginShelter.html",
                 controller: "LoginShelterCtrl"
             })
-            .when('/login', {
-                redirectTo: '/login/individual'
-            })
-            .when('/create/individual', {
-                templateUrl: "js/userEntity/createIndividual.html",
+            .state('noAuth.createIndividual', {
+                url: "/create/individual",
+                templateUrl: "app/userEntity/createIndividual.html",
                 controller: "CreateIndividualCtrl"
             })
-            .when('/create/animalShelter', {
-                templateUrl: "js/userEntity/createShelter.html",
+            .state('noAuth.createShelter', {
+                url: "/create/shelter",
+                templateUrl: "app/userEntity/createShelter.html",
                 controller: "CreateShelterCtrl"
             })
-            .when('/create/', {
-                redirectTo: '/create/individual'
+            .state('noAuth.viewIndividual', {
+                url: "/view/individual/:individualId",
+                templateUrl: "app/individual/view.html",
+                controller: "ViewProfileCtrl"
             })
-            // Individual Module
-            .when('/individual/dashboard', {
-                templateUrl: "js/individual/dashboard.html",
-                controller: "DashboardIndividualCtrl"
+            .state('noAuth.viewShelter', {
+                url: "/view/shelter/:shelterId",
+                templateUrl: "app/shelter/view.html",
+                controller: "ViewShelterCtrl"
             })
-            .when('/individual/edit', {
-                templateUrl: "js/individual/edit.html",
-                controller: "EditIndividualCtrl"
-            })
-            // Shelter Module
-            .when('/shelter/dashboard', {
-                templateUrl: "js/shelter/dashboard.html",
-                controller: "DashboardShelterCtrl"
-            })
-            .when('/shelter/edit', {
-                templateUrl: "js/shelter/edit.html",
-                controller: "EditShelterCtrl"
-            })
-            .when('/shelter/adoptions', {
-                templateUrl: "js/shelter/adoptions.html",
-                controller: "AdoptionShelterCtrl"
-            })
-            .when('/shelter/pledges', {
-                templateUrl: "js/shelter/pledges.html",
-                controller: "PledgeShelterCtrl"
-            })
-            .when('/shelter/:animalShelterId', {
-                templateUrl: "js/shelter/about.html",
-                controller: "AboutShelterCtrl"
-            })
-            // Dog Module
-            .when('/dog/:dogId', {
-                templateUrl: "js/dog/about.html",
-                controller: "AboutDogCtrl"
-            })
-            .when('/dog/:dogId/adopt', {
-                templateUrl: "js/dog/adopt.html",
-                controller: "AdoptDogCtrl"
-            })
-            .when('/dog/:dogId/pledge', {
-                templateUrl: "js/dog/pledge.html",
-                controller: "PledgeDogCtrl"
-            })
-            .otherwise({
-                redirectTo: '/'
+            .state('noAuth.viewDog', {
+                url: "/view/dog/:dogId",
+                templateUrl: "app/dog/view.html",
+                controller: "ViewDogCtrl"
             });
+            
+        
+        $stateProvider
+            .state('individualAuth', {
+                abstract: true,
+                templateUrl: "app/userEntity/menuIndividual.html"
+            })
+            .state('individualAuth.dashboard', {
+                url: "/dashboard",
+                templateUrl: "app/individual/dashboard.html",
+                controller: "DashboardIndividualCtrl"
+            });
+        
+        $stateProvider
+            .state('shelterAuth', {
+                abstract: true,
+                templateUrl: "app/userEntity/menuShelter.html"
+            })
+            .state('shelterAuth.dashboard', {
+                url: "/dashboard",
+                templateUrl: "app/shelter/dashboard.html",
+                controller: "DashboardShelterCtrl"
+            });
+        
+        $urlRouterProvider.otherwise('/home');
+            
     }]);
     
 }(window));
