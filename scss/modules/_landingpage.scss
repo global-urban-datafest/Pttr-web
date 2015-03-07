@@ -16,10 +16,7 @@ section{
 	@include background-size(cover);
 	@include SameWidthHeight(100%);
 }
-%overlay{
-	@include SameWidthHeight(100%);
-	background: black; 
-}
+
 .overlay{
 	@extend %overlay;
 }
