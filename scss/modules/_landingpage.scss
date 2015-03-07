@@ -12,6 +12,7 @@ section{
 }
 %overlay{
 	@include SameWidthHeight(100%;);
+	background: black;
 }
 .overlay{
 	@extend $overlay;
