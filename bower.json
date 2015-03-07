@@ -1,0 +1,34 @@
+{
+  "name": "Pttr (Web)",
+  "version": "1.0.0",
+  "authors": [
+    "Alastair Paragas <alastairparagas@gmail.com>",
+    "Xavier Thomas <xthom001@gmail.com>",
+    "Kennet Postigo <kennetfpostigo@gmail.com>"
+  ],
+  "description": "Pttr is a Match.com for stray dogs, animal shelters and prospective pet owners.",
+  "main": "index.html",
+  "keywords": [
+    "pttr",
+    "stray",
+    "dogs",
+    "cats",
+    "pets"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.2",
+    "Bootflat": "~2.0.4",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "angularfire": "~1.0.0"
+  }
+}
