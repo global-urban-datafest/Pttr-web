@@ -20,18 +20,15 @@ section{
     @include background-size(cover);
     @include SameWidthHeight(100%);
 }
-
 .overlay {
     @include overlay(213, 67%, 36%, 0.34);
     @include SameWidthHeight(100%);
     position:relative;
 }
-
 .pg_img_blk{
 	@include SameWidthHeight(100%);
 	@extend %flexCenter;
 }
-
 .landingContent{
 	z-index: 39;
 	border:solid 1px red;
