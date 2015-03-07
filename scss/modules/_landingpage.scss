@@ -21,3 +21,8 @@ section {
     @include overlay(213, 67%, 36%, 0.34);
     @include SameWidthHeight(100%);
 }
+
+.pg_img_blk{
+	@include SameWidthHeight(100%);
+	@extend %flexCenter;
+}
