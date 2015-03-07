@@ -1,34 +1,36 @@
-@mixin background-size($size){
-	-webkit-background-size:$size;
-	   -moz-background-size:$size;
-		-ms-background-size:$size;
-		 -o-background-size:$size;
-		    background-size:$size;
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -ms-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
 }
-@mixin SameWidthHeight($x){
-	width: $x;
-	height: $x;
+@mixin SameWidthHeight($x) {
+    width: $x;
+    height: $x;
 }
-
-@mixin overlay($a, $b, $c, $d){
-	background: hsla($a, $b, $c, $d);
+@mixin overlay($a, $b, $c, $d) {
+    background: hsla($a, $b, $c, $d);
 }
-@mixin paddingLR($same){
-	padding-left:$same;
-	padding-right:$same;
+@mixin paddingLR($same) {
+    padding-left: $same;
+    padding-right: $same;
 }
-@mixin paddingTB($same){
-	padding-top:$same;
-	padding-bottom:$same;
+@mixin paddingTB($same) {
+    padding-top: $same;
+    padding-bottom: $same;
 }
-
-@mixin border-radius($radius){
-	-webkit-border-radius:$radius;
-	   -moz-border-radius:$radius;
-		-ms-border-radius:$radius;
-		 -o-border-radius:$radius;
-		    border-radius:$radius;
-
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
 }
-
-
+@mixin gradient($a, $b, $c, $d, $e) {
+    background-color: -webkit-gradient($a, $b $c, $d $e);
+    background-color: -moz-gradient($a, $b $c, $d $e);
+    background-color: -ms-gradient($a, $b $c, $d $e);
+    background-color: -o-gradient($a, $b $c, $d $e);
+    background-color: gradient($a, $b $c, $d $e);
+}
