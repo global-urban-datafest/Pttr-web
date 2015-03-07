@@ -93,16 +93,8 @@ section {
     }
     .p_blck {
         @include paddingLR(4%);
-        p:first-child:first-letter {
-            float: left;
-            color: rgba(3, 29, 54, 1);
-            font-size: 50px;
-            line-height: 40px;
-            padding-top: 4px;
-            padding-right: 8px;
-            padding-left: 3px;
-            font-family: Georgia;
-        }
+        text-align:justify;
+
     }
 }
 #sign_Btn_Blk {
@@ -167,16 +159,38 @@ color:#CEDBF0;
 background-color:yellow;
 }
 
-.containerPttr{
-	@include gradient(145deg, #1E5699, 10%, #9C656D, 90%);
-
+#pttrInfo{
+	background-color:#1E5699;
+	color:white;
+}
 navCust{
 	margin-botton:0;
 }
 .footCust{
 	background-color: #1E5699;
-	color:#CEDBF0
+	color:#CEDBF0;
 	margin-bottom:0;
 }
 
+.orgButton{
+	background-color: #1E5699;
+	color:white;
+}
+.orgButton:hover{
+	background-color:#2D81E5;
+	color:white;
+}
+
+.indButton{
+	background-color:white;
+	color:#1E5699;
+}
+.indButton:hover{
+	background-color: #2D81E5;
+	color:white;
+}
+.logo{
+	height:100px;
+	width:100px;
+}
 
