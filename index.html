@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav navigation class="navbar navbar-inverse navCust">
+    <nav navigation class="navbar navbar-default navCust">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,18 +26,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Pttr</a>
+                <a class="navbar-brand" href="index.html">Pttr</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a>
-                    </li>
+                    <li><a href="#">Home</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+                        <a href="#">Mission</a>
                     </li>
-                    <li><a href="#">Page 2</a>
+                    <li>
+                        <a href="#">About</a>
                     </li>
-                    <li><a href="#">Page 3</a>
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Log In</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +143,7 @@
         </div>
     </section>
     <section class="mainContent wow flipInX" data-wow-duration="3s" id="signUp">
-        <div class="container">
+        <div class="container" id="signUp">
             <div class="header_blk">
                 <h1>Sign Up</h1>
             </div>
@@ -152,18 +158,18 @@
             </div>
         </div>
     </section>
-    <footer class="footCust">
+    <footer class="footCust clearfix">
         <h4>Pttr</h4>
         <ul class="listLeft">
-        <li>Home</li>
-        <li>Mission</li>
-        <li>About</li>
-        <li>Copyright &copy 2014 Pttr All Rights Reserved</li>
+            <li>Home</li>
+            <li>Mission</li>
+            <li>About</li>
+            <li class="center">Copyright &copy 2014 Pttr All Rights Reserved</li>
         </ul>
         <ul class="listRight">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
         </ul>
     </footer>
 </body>
