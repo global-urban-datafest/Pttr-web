@@ -9,7 +9,7 @@
 	width: $x;
 	height: $x;
 }
-@mixin overlay($color){
-	@include SameWidthHeight(100%);
-	background: $color;
+@mixin overlay($a, $b, $c, $d){
+	background: hsla($a, $b, $c, $d);
 }
+
