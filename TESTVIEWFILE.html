@@ -22,46 +22,10 @@
 </head>
 
 <body ng-app="">
-    <div class="view">
-        <div class="container profileSettings">
-            <h1>Profile Information</h1>
-            <form>
-                <div class="row">
-                    <div class="col-sm-6" ng-init="isDisable=false">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Address</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address" ng-model="edit.data.address">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" ng-model="edit.data.password">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="email" name="email" placeholder="Enter Email" ng-model="edit.data.email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" ng-model="edit.data.phone">
-                        </div>
+    
 
-                    </div>
-                </div>
-                <div class="btn_blk">
-                    <button ng-submit() class="btn btn-lg">Save</button>
-                    <button ng-submit() class="btn btn-lg">Edit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <footer class="footCust clearfix">
+<ui-view></ui-view>
+<!--     <footer class="footCust clearfix">
         <h4>Pttr</h4>
         <ul class="listLeft">
             <li>Home</li>
@@ -74,7 +38,7 @@
             <li>Instagram</li>
             <li>Twitter</li>
         </ul>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
