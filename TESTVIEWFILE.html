@@ -8,38 +8,59 @@
     <link rel="stylesheet" type="text/css" href="css/format.css">
     <script src="bower_components/Bootflat/js/jquery-1.10.1.min.js"></script>
     <script src="bower_components/Bootflat/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
+    <script src="app/firebaseRef/config.js"></script>
+    <script src="app/firebaseRef/firebaseRef.js"></script>
     <script src="app/main/config.js"></script>
+    <script src="app/userEntity/config.js"></script>
+    <script src="app/userEntity/AuthService.js"></script>
 </head>
 
-<body ng-app="pttr">
-<div class="dashboard">
-        <div class="container">
-            <div class="row">
-                <!-- change the name of the animal to whatever you want -->
-                <!-- classes to use are in _dashboard .liked  LET KENNY TAKE CARE OF COLOR!!!! -->
-                <div class="col-sm-3 wow zoomIn" ng-repeat="animal in animal">
-                    <div class="thumbnail ">
-                        <img class="img-rounded" src="img/thumbnail-3.jpg">
-                        <div class="caption text-center">
-                            <h2>{{animal.name}}</h2>
-                            <h3>{{animal.type}}</h3>
-                            <p>
-                                {{animal.description}}
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-default liked" role="button">Like</a>
-                                <a href="#" class="btn btn-default" role="button">Adopt</a>
-                                <a href="#" class="btn btn-default" role="button">View</a>
-                            </p>
+<body ng-app="">
+    <div class="view">
+        <div class="container profileSettings">
+            <h1>Profile Information</h1>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6" ng-init="isDisable=false">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address" ng-model="edit.data.address">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" ng-model="edit.data.password">
                         </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="email" name="email" placeholder="Enter Email" ng-model="edit.data.email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" ng-model="edit.data.phone">
+                        </div>
+
+                    </div>
                 </div>
-            </div>
+                <div class="btn_blk">
+                    <button ng-submit() class="btn btn-lg">Save</button>
+                    <button ng-submit() class="btn btn-lg">Edit</button>
+                </div>
+            </form>
         </div>
     </div>
-    
+
     <footer class="footCust clearfix">
         <h4>Pttr</h4>
         <ul class="listLeft">

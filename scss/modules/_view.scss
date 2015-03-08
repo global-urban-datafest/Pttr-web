@@ -1,29 +1,32 @@
-
 .view {
     .profileSettings {
         h1 {
             text-align: center;
         }
-        .btn {
-            background-color: #1E5699;
-            color: #DBE9EE;
-            margin-bottom: 10%;
-        }
-        .btn:hover {
-            background-color: #2D81E5;
-            color: #EEF3F7;
-            margin-bottom: 10%;
+        .btn_blk {
+            display: flex;
+            justify-content: center;
+            padding-top: 5%;
+            .btn {
+                background-color: #1E5699;
+                color: #DBE9EE;
+                margin-bottom: 10%;
+            }
+            .btn:hover {
+                background-color: #2D81E5;
+                color: #EEF3F7;
+                margin-bottom: 10%;
+            }
+            .btn:nth-child(0){
+                margin-left:5%;
+            }
+            .btn:nth-child(1){
+                margin-right:5%;
+            }
         }
         input[text], textarea {
             margin-bottom: 20px;
-        }
-        p, li {
-            text-align: justify;
-            color: #1E5699;
-            margin-bottom:10px;
-        }
-        h4{
-            text-align:center;
+            resize: none;
         }
     }
 }
