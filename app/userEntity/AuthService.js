@@ -63,7 +63,11 @@
                     }
                 ).then(
                     function () {
-                        deferred.resolve('Succesfully logged in.');
+                        if (user.firebaseRef.$value) {
+                            deferred.resolve('Succesfully logged in.');
+                        } else {
+                            deferred.reject('That user was found in our auth but not in our site tree. Contradiction.');
+                        }
                     }
                 );
             return deferred.promise;

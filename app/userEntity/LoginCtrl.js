@@ -15,8 +15,9 @@
         var loginType = $location.path().split("/")[2]; 
         
         $scope.login.submit = function () {
-            if ($scope.login.status) {
-                delete $scope.login.status;
+            $scope.login.status = {
+                type: "info",
+                msg: "Loggin In. Please wait"   
             }
             if (loginType == "individual") {
                 AuthService.loginIndividual($scope.login.data.email, $scope.login.data.password).then(
