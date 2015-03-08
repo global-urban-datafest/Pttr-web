@@ -37,7 +37,6 @@
             if (stateNamingSplit[0] === "shelterAuth" &&
                     ((AuthService.getUser() && AuthService.getUser().type !== "shelter") || !AuthService.getUser().hasOwnProperty('type'))) {
                 event.preventDefault();
-                console.log('not shelter');
             }
         });
 
