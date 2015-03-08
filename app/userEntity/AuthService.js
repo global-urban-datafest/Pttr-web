@@ -63,10 +63,10 @@
                     }
                 ).then(
                     function () {
-                        if (user.firebaseRef.$value) {
+                        if (angular.isObject(user.firebaseRef)) {
                             deferred.resolve('Succesfully logged in.');
                         } else {
-                            deferred.reject('That user was found in our auth but not in our site tree. Contradiction.');
+                            deferred.reject('That user was found in our authentication system but not in our site tree. Contradiction.');
                         }
                     }
                 );
