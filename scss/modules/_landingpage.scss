@@ -29,8 +29,21 @@ body a:hover {
     border:solid 3px #EDDA91;
     text-align:center;
 }
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover{
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:{
     color:#2D81E5;
+}
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus{
+    background-color:#1E5699;
+    border-color:#2D81E5;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background-color:#1E5699;
+     border-color:#2D81E5;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color:#2D81E5;
 }
 
 
@@ -192,12 +205,13 @@ navCust {
 }
 .right {
     background-color: white;
+
 }
 .listLeft {
     list-style: none;
     margin: 10px 10px;
     display: inline-block;
-    float: left; 
+    float: left;
 }
 .logo {
     height: 100px;
@@ -212,7 +226,6 @@ navCust {
 #signUp {
     min-height: 300px;
 }
-.containerPttr { 
+.containerPttr {
     overflow: none;
 }
- 
