@@ -31,7 +31,7 @@
         function login(email, password, type) {
             var deferred = $q.defer();
             if (!email || !password) {
-                deferred.reject('Username and/or Password was not provided.');
+                deferred.reject('Email and/or Password was not provided.');
                 return deferred.promise;
             }
             if (!type || !angular.isString(type)) {
