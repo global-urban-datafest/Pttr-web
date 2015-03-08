@@ -1,11 +1,16 @@
 <div class="dashboard">
         <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1><span class="glyphicon glyphicon-tasks"></span> Dashboard</h1>
+            </div>
+        </div>
             <div class="row">
                 <!-- change the name of the animal to whatever you want -->
                 <!-- classes to use are in _dashboard .liked  LET KENNY TAKE CARE OF COLOR!!!! -->
-                <div class="col-sm-3 wow zoomIn" ng-repeat="animal in animal">
-                    <div class="thumbnail ">
-                        <img class="img-rounded" src="img/thumbnail-3.jpg">
+                <div class="col-sm-3 wow zoomIn" ng-repeat="animal in animals" >
+                    <div class="thumbnail"  ng-class="{liked: liked}">
+                        <img class="img-rounded" ng-src="animal.img">
                         <div class="caption text-center">
                             <h2>{{animal.name}}</h2>
                             <h3>{{animal.type}}</h3>
@@ -13,7 +18,7 @@
                                 {{animal.description}}
                             </p>
                             <p>
-                                <a href="#" class="btn btn-default liked" role="button">Like</a>
+                                <a href="#" class="btn btn-default" role="button" ng-class="{liked: liked}" ng-click="liked = !liked">Like</a>
                                 <a href="#" class="btn btn-default" role="button">Adopt</a>
                                 <a href="#" class="btn btn-default" role="button">View</a>
                             </p>

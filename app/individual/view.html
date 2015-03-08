@@ -1,53 +1,43 @@
-<div class="container view">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="img_blk">
-                    <img src="images/sad_dog.jpg" class="img-responsive center-block" alt="">
-                </div>
-            </div>
-            <div class="col-sm-6">
+<div class="view">
+        <div class="container profileSettings">
+            <h1><span class="glyphicon glyphicon-cog">Profile Information</h1>
+            <form>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="input_blk">
-                            <label for="name">Name:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="name" placeholder="Name:" ng-model="individual.name">
+                    <div class="col-sm-6" ng-init="isDisable=false">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input disabled="{{isEditable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="addr_blk">
-                            <label for="address">Address:</label>
-                            <textarea disabled="{{isDisabled}}" name="address" id="address" placeholder="Address:" maxlength="140"></textarea>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input disabled="{{isEditable}}" type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address" ng-model="edit.data.address">
                         </div>
+
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div id="bio_blk">
-                    <label for="userbio">Biography:</label>
-                    <textarea disabled="{{isDisabled}}" name="userbio" id="userbio" rows="5" placeholder="Biography:" maxlength="250"></textarea>
-                </div>
-            </div>
-            <div class="col-sm-6" id="user_info2">               
-                <div class="row">
                     <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="email">Email:</label>
-                            <input disabled="{{isDisabled}}" type="email" id="email" placeholder="Email:">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input disabled="{{isEditable}}" type="text" class="form-control" id="email" name="email" placeholder="Enter Email" ng-model="edit.data.email">
                         </div>
-                        <div class="input_blk">
-                            <label for="phone">Phone:</label>
-                            <input disabled="{{isDisabled}}" type="tel" id="phone" placeholder="Phone:">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input disabled="{{isEditable}}" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" ng-model="edit.data.phone">
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="biography">Biography</label>
+                            <textarea disabled="{{isEditable}}" class="form-control" name="biography" id="biography" placeholder="Tell us about yourself..." ng-model="edit.data.biography" maxlength="140"></textarea>
+                        </div>
+                        <div class="btn_blk" ng-show="isEditable">
+                            <button ng-submit() class="btn btn-lg">Save</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="btn_blk">
-            <button class="btn btn-lg" ngClick(isDisabled())>Edit</button>
-            <button class="btn btn-lg" ngClick(isDisabled())>Save</button>
+            </form>
         </div>
     </div>

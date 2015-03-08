@@ -1,10 +1,80 @@
 .dashboard {
-    .liked {
-        background-color: #da4453;
-        border-color: #da4453;
-        color: white;
+    .search_blk {
+    text-align:center;
+        input{
+            @include border-radius(3px);
+            border: 1px solid #333;
+            margin-right: 5%;
+            padding: 1px 3px;
+        }
     }
-    div.liked{
-    	background-color:#FFCE54
+    div.liked {
+        background-color: #48CFAD;
+    }
+    img {
+        height: 250px;
+        border-radius: 10px/30px;
+    }
+    .thumbnail {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        margin-bottom: 45px;
+        border-radius: 10px/30px;
+        background-color: white;
+    }
+    .btn {
+        background-color: #2D81E5;
+        color: #F2F2F2;
+    }
+    .btn:hover {
+        background-color: #1E5699;
+        color: #F2F2F2;
+    }
+    .search_blk {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    #viewport {
+        border-right: 2px solid black;
+        height: 600px;
+        overflow-y: auto;
+        overflow-x: none;
+        img {
+            height: 150px;
+        }
+    }
+    .subsecs {
+        .listofPledges {
+            overflow-y: hidden;
+            ul {
+                padding-left: 2%;
+                @extend %inlineBox;
+                li {
+                    position: relative;
+                    list-style: none;
+                    @include marginLR(2%);
+                }
+                li:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow:  0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        width: 8px;
+        border:1px solid #333;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        background-color:#1E5699;
+        width: 8px;
     }
 }

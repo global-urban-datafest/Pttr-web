@@ -1,8 +1,13 @@
 @import 'landingpage';
 @import 'view';
-@import 'ilogin'; 
+@import 'ilogin';
 @import 'dashboard';
+@import 'navs';
 @import 'animate';
+@import 'mapViews';
 body {
     overflow-x: hidden;
+    .view,.dashboard{
+    padding-top: 4%;
+    }
 }

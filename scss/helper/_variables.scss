@@ -5,5 +5,21 @@
 %border_box{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
 	box-sizing: border-box;
+}
+%boxKit{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	display: box;
+}
+%inlineBox{
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-box;
+	display: -o-inline-box;
+	display: inline-box;
 }

@@ -1,31 +1,43 @@
 .view {
-    padding-top: 10%;
-    .input_blk {
-        @include paddingLR(5%);
-    }
-    label{
-        margin-right:10px;
-    }
-    #bio_blk, #addr_blk {
-        textarea {
-            width: 100%;
-            @extend %border_box;
-            resize: none;
+    .profileSettings {
+        h1 {
+            text-align: center;
         }
-        width:100%;
-        padding-top: 10%;
-    }
-    .btn_blk {
-        margin-top: 5%;
-    }
-    .col-sm-12 {
-        .input_blk {
+        li{
+            margin-bottom:15px;
+            text-align:justify;
+            color:#1E5699;
+        }
+        .btn_blk {
             display: flex;
             justify-content: center;
+            padding-top: 5%;
+            .btn {
+                background-color: #1E5699;
+                color: #DBE9EE;
+                margin-bottom: 10%;
+            }
+            .btn:hover {
+                background-color: #2D81E5;
+                color: #EEF3F7;
+                margin-bottom: 10%;
+            }
+            .btn:nth-child(0){
+                margin-left:5%;
+            }
+            .btn:nth-child(1){
+                margin-right:5%;
+            }
         }
-        @include paddingLR(15%);
-    }
-    #user_info2{
-        padding-top:10%;
+        input[text], textarea {
+            margin-bottom: 20px;
+            resize: none;
+        }
+        .col-sm-12{
+        @include paddingLR(20%);
+        }
+        img{
+        margin-bottom:50px;
+        }
     }
 }

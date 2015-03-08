@@ -1,0 +1,35 @@
+<div class="view">
+        <div class="container profileSettings">
+            <h1><span class="glyphicon glyphicon-cog">Profile Information</h1>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6" ng-init="isDisable=false">
+                        <div class="form-group">
+                            <label for="name">Animal Name</label>
+                            <input disable="{{isDisable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="atype">Animal Type</label>
+                            <select id="atype" class="form-control">
+                                <option>Dog</option>
+                                <option>Cat</option>
+                                <option>Bird</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea disable="{{isDisable}}" class="form-control" name="description" id="description" placeholder="Describe " ng-model="edit.data.biography" maxlength="140"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="btn_blk">
+                        <button ng-submit() class="btn btn-lg">Edit</button>
+                        <button ng-submit() class="btn btn-lg">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
