@@ -1,0 +1,96 @@
+.nvclass {
+    .navbar-right ul.nav {
+        margin-right: 50px;
+    }
+    .logout_btn_blk {
+        @extend %boxKit;
+        padding-top: 2%;
+    }
+    .navbar-right {
+        @include paddingTB(2%);
+    }
+    .navbar-header{
+    	a{
+    	    padding-top: 4.8%;
+    	}
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .nvclass {
+        .navbar-header {
+            width: 50%;
+            position: relative;
+            a.navbar-brand {
+                float: right;
+                position: absolute;
+                left: 50px;
+                top: 2px;
+            }
+        }
+        .navbar-right ul.nav {
+            margin-right: 50px;
+        }
+        .navbar-right {
+            @include paddingTB(1.5%);
+        }
+    }
+}
+nav.navbar.nvclass {
+    border-bottom: solid 2px #CEDBF0;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border: solid 1px #CEDBF0;
+    z-index: 100;
+    width: 100%;
+    @include border-radius(0);
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
+    color: #1E5699;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-link, .navbar-default .btn-link {
+    color: #1E5699;
+    @include SameWidthHeight(80px);
+    border-radius: 50%;
+    border: solid 3px #EDDA91;
+    text-align: center;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
+    color: #2D81E5;
+}
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
+    background-color: #1E5699;
+    border-color: #2D81E5;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #1E5699;
+    border-color: #2D81E5;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2D81E5;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
+    color: #1E5699;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
+    color: #2D81E5;
+}
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
+    background-color: #1E5699;
+    border-color: #2D81E5;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #1E5699;
+    border-color: #2D81E5;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2D81E5;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
+    color: #1E5699;
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover {
+    color: #2D81E5;
+}

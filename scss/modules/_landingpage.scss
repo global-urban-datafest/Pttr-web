@@ -9,31 +9,6 @@ body a, body a:active, body a:visited {
 body a:hover {
     color: white;
 }
-.navbar {
-    position: fixed;
-    top: 0;
-    background-color: white;
-    border: solid 1px #CEDBF0;
-    z-index: 100;
-    width: 100%;
-    @include border-radius(0);
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a{
-    color:#1E5699;
-}
-.navbar-default .navbar-brand, .navbar-default .navbar-link, .navbar-default .btn-link{
-    color:#1E5699;
-    height:100px;
-    width:100px;
-    border-radius:50%;
-    border:solid 3px #EDDA91;
-    text-align:center;
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover{
-    color:#2D81E5;
-}
-
-
 section {
     position: relative;
     width: 100%;
@@ -120,14 +95,18 @@ section {
 #sign_Btn_Blk {
     width: 100%;
     @extend %flexCenter;
-    button {
+    .btn {
         width: 30%;
         font-size: 2em;
     }
-    button:nth-child(0) {
+    .orgButton {
+        background-color: #1E5699;
+        color: white;
         margin-left: 10%;
     }
-    button:nth-child(1) {
+    .orgButton:hover {
+        background-color: #2D81E5;
+        color: white;
         margin-right: 10%;
     }
 }
@@ -170,14 +149,6 @@ navCust {
     background-color: #1E5699;
     color: #CEDBF0;
 }
-.orgButton {
-    background-color: #1E5699;
-    color: white;
-}
-.orgButton:hover {
-    background-color: #2D81E5;
-    color: white;
-}
 .indButton {
     background-color: white;
     color: #1E5699;
@@ -197,7 +168,7 @@ navCust {
     list-style: none;
     margin: 10px 10px;
     display: inline-block;
-    float: left; 
+    float: left;
 }
 .logo {
     height: 100px;
@@ -212,7 +183,6 @@ navCust {
 #signUp {
     min-height: 300px;
 }
-.containerPttr { 
+.containerPttr {
     overflow: none;
 }
- 

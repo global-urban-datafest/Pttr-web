@@ -1,19 +1,20 @@
 .view {
-    padding-top: 10%;
-    .input_blk {
-        padding-top: 25%;
-        @include paddingLR(5%);
+    label{
+        margin-right:10px;
     }
     #bio_blk, #addr_blk {
-        textarea {
+        textarea { 
             width: 100%;
             @extend %border_box;
             resize: none;
         }
         width:100%;
-        padding-top: 10%;
     }
     .btn_blk {
         margin-top: 5%;
+    }
+    
+    #user_info2{
+        padding-top:10%;
     }
 }
