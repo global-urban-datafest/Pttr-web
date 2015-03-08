@@ -15,14 +15,14 @@
             }
         };
         
-        var loginType = $location.path().split("/")[2]; 
+        var loginType = $location.path().split("/")[2];
         
         $scope.create.submit = function () {
             $scope.login.status = {
                 type: "info",
-                msg: "Loggin In. Please wait"   
-            }
-            if ($routeParams.type === "individual") {
+                msg: "Creating your account. Please wait"
+            };
+            if (loginType === "individual") {
                 AuthService.registerIndividual($scope.create.data).then(
                     function (success) {
                         $scope.create.status = {
@@ -37,7 +37,7 @@
                         };
                     }
                 );
-            } else if ($routeParams.type === "shelter") {
+            } else if (loginType === "shelter") {
                 AuthService.registerIndividual($scope.create.data).then(
                     function (success) {
                         $scope.create.status = {

@@ -3,7 +3,7 @@
     
     var angular = window.angular;
     
-    angular.module('pttr.userEntity').controller('LoginCtrl', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
+    angular.module('pttr.userEntity').controller('LoginCtrl', ['$scope', '$location', '$state', 'AuthService', function ($scope, $location, $state, AuthService) {
         
         $scope.login = {
             data: {
@@ -12,20 +12,21 @@
             }
         };
         
-        var loginType = $location.path().split("/")[2]; 
+        var loginType = $location.path().split("/")[2];
         
         $scope.login.submit = function () {
             $scope.login.status = {
                 type: "info",
-                msg: "Loggin In. Please wait"   
-            }
-            if (loginType == "individual") {
+                msg: "Logging In. Please wait"
+            };
+            if (loginType === "individual") {
                 AuthService.loginIndividual($scope.login.data.email, $scope.login.data.password).then(
                     function (success) {
                         $scope.login.status = {
                             type: "success",
                             msg: success
                         };
+                        $state.go('individualAuth.dashboard');
                     },
                     function (error) {
                         $scope.login.status = {
@@ -34,13 +35,14 @@
                         };
                     }
                 );
-            } else if (loginType == "shelter") {
+            } else if (loginType === "shelter") {
                 AuthService.loginShelter($scope.login.data.email, $scope.login.data.password).then(
                     function (success) {
                         $scope.login.status = {
                             type: "success",
                             msg: success
                         };
+                        $state.go('shelterAuth.dashboard');
                     },
                     function (error) {
                         $scope.login.status = {
@@ -54,9 +56,9 @@
         
         $scope.closeAlert = function () {
             if (angular.isObject($scope.login.status)) {
-                delete $scope.login.status;   
+                delete $scope.login.status;
             }
-        }
+        };
         
     }]);
     
