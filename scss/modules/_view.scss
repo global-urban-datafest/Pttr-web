@@ -3,6 +3,11 @@
         h1 {
             text-align: center;
         }
+        li{
+            margin-bottom:15px;
+            text-align:justify;
+            color:#1E5699;
+        }
         .btn_blk {
             display: flex;
             justify-content: center;
@@ -18,7 +23,7 @@
                 margin-bottom: 10%;
             }
             .btn:nth-child(0){
-                margin-left:5%; 
+                margin-left:5%;
             }
             .btn:nth-child(1){
                 margin-right:5%;
@@ -30,6 +35,9 @@
         }
         .col-sm-12{
         @include paddingLR(20%);
+        }
+        img{
+        margin-bottom:50px;
         }
     }
 }

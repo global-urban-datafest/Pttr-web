@@ -31,7 +31,7 @@
         function login(email, password, type) {
             var deferred = $q.defer();
             if (!email || !password) {
-                deferred.reject('Username and/or Password was not provided.');
+                deferred.reject('Email and/or Password was not provided.');
                 return deferred.promise;
             }
             if (!type || !angular.isString(type)) {
@@ -63,7 +63,11 @@
                     }
                 ).then(
                     function () {
-                        deferred.resolve('Succesfully logged in.');
+                        if (user.firebaseRef.$value) {
+                            deferred.resolve('Succesfully logged in.');
+                        } else {
+                            deferred.reject('That user was found in our auth but not in our site tree. Contradiction.');
+                        }
                     }
                 );
             return deferred.promise;

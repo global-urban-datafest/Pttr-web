@@ -2,7 +2,7 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity', 'pttr.shelter']);
+        app = angular.module('pttr', ['ui.router', 'ui.bootstrap', 'ngRoute', 'firebase', 'firebaseRef', 'pttr.userEntity', 'pttr.shelter']);
     
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
@@ -34,22 +34,22 @@
                 templateUrl: "app/main/contact.html"
             })
             .state('noAuth.loginIndividual', {
-                url: "/login?type=individual",
+                url: "/login/individual",
                 templateUrl: "app/userEntity/loginIndividual.html",
                 controller: "LoginCtrl"
             })
             .state('noAuth.loginShelter', {
-                url: "/login?type=shelter",
+                url: "/login/shelter",
                 templateUrl: "app/userEntity/loginShelter.html",
                 controller: "LoginCtrl"
             })
             .state('noAuth.createIndividual', {
-                url: "/create?type=individual",
+                url: "/create/individual",
                 templateUrl: "app/userEntity/createIndividual.html",
                 controller: "CreateCtrl"
             })
             .state('noAuth.createShelter', {
-                url: "/create?type=shelter",
+                url: "/create/shelter",
                 templateUrl: "app/userEntity/createShelter.html",
                 controller: "CreateCtrl"
             })

@@ -27,7 +27,7 @@
         margin-bottom: 2%;
     }
     #viewport {
-        border-right:2px solid black;
+        border-right: 2px solid black;
         height: 600px;
         overflow-y: auto;
         overflow-x: none;
@@ -35,7 +35,7 @@
             height: 150px;
         }
     }
-    .subsecs {        
+    .subsecs {
         .listofPledges {
             overflow-y: hidden;
             ul {
@@ -51,5 +51,8 @@
                 }
             }
         }
-    }
+        h1 {
+            text-align: center;
+        }
+    } 
 }

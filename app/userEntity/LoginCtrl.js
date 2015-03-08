@@ -3,16 +3,24 @@
     
     var angular = window.angular;
     
-    angular.module('pttr.userEntity').controller('LoginCtrl', ['$scope', '$routeParams', 'AuthService', function ($scope, $routeParams, AuthService) {
+    angular.module('pttr.userEntity').controller('LoginCtrl', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
         
-        $scope.login = {};
+        $scope.login = {
+            data: {
+                email: "",
+                password: ""
+            }
+        };
+        
+        var loginType = $location.path().split("/")[2]; 
         
         $scope.login.submit = function () {
-            if ($scope.login.status) {
-                delete $scope.login.status;
+            $scope.login.status = {
+                type: "info",
+                msg: "Loggin In. Please wait"   
             }
-            if ($routeParams.type == "individual") {
-                AuthService.loginIndividual($scope.login.data).then(
+            if (loginType == "individual") {
+                AuthService.loginIndividual($scope.login.data.email, $scope.login.data.password).then(
                     function (success) {
                         $scope.login.status = {
                             type: "success",
@@ -26,8 +34,8 @@
                         };
                     }
                 );
-            } else if ($routeParams.type == "shelter") {
-                AuthService.loginShelter($scope.login.data).then(
+            } else if (loginType == "shelter") {
+                AuthService.loginShelter($scope.login.data.email, $scope.login.data.password).then(
                     function (success) {
                         $scope.login.status = {
                             type: "success",
@@ -43,6 +51,12 @@
                 );
             }
         };
+        
+        $scope.closeAlert = function () {
+            if (angular.isObject($scope.login.status)) {
+                delete $scope.login.status;   
+            }
+        }
         
     }]);
     
