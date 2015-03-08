@@ -1,13 +1,24 @@
 .dashboard {
-    .liked {
-        background-color: #da4453;
-        border-color: #da4453;
-        color: white;
+    div.liked {
+        .btn:first-child {}
     }
-    div.liked{
-    	background-color:#FFCE54
+    img {
+        height: 250px;
+        border-radius: 10px/30px;
+
     }
-    img{
-    	height: 250px;
+    .thumbnail {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        margin-bottom:45px;
+        border-radius: 10px/30px;
+        background-color:white;
+    }
+    .btn{
+    background-color:#2D81E5;
+    color:#F2F2F2;
+    }
+    .btn:hover, .btn:active, .btn:focus{
+    background-color:#EE2B31;
+    color:#F2F2F2;
     }
 }
