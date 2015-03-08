@@ -18,8 +18,9 @@
         var loginType = $location.path().split("/")[2]; 
         
         $scope.create.submit = function () {
-            if ($scope.create.status) {
-                delete $scope.create.status;
+            $scope.login.status = {
+                type: "info",
+                msg: "Loggin In. Please wait"   
             }
             if ($routeParams.type === "individual") {
                 AuthService.registerIndividual($scope.create.data).then(
