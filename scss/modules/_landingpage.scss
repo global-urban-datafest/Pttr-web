@@ -9,66 +9,6 @@ body a, body a:active, body a:visited {
 body a:hover {
     color: white;
 }
-.navbar {
-    position: fixed;
-    top: 0;
-    background-color: white;
-    border: solid 1px #CEDBF0;
-    z-index: 100;
-    width: 100%;
-    @include border-radius(0);
-}
-
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a{
-    color:#1E5699;
-}
-.navbar-default .navbar-brand, .navbar-default .navbar-link, .navbar-default .btn-link{
-    color:#1E5699;
-    height:100px;
-    width:100px;
-    border-radius:50%;
-    border:solid 3px #EDDA91;
-    text-align:center;
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a{
-    color:#2D81E5;
-}
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus{
-    background-color:#1E5699;
-    border-color:#2D81E5;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
-    background-color:#1E5699;
-     border-color:#2D81E5;
-}
-
-.navbar-default .navbar-toggle .icon-bar{
-    background-color:#2D81E5;
-}
-
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #1E5699;
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #2D81E5;
-}
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #1E5699;
-    border-color: #2D81E5;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #2D81E5;
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-    color: #1E5699;
-}
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a:hover {
-    color: #2D81E5;
-}
 section {
     position: relative;
     width: 100%;
