@@ -22,7 +22,37 @@
         background-color: #1E5699;
         color: #F2F2F2;
     }
-    h1 {
-    text-align:center;
+    .search_blk {
+        width: 100%;
+        margin-bottom: 2%;
     }
+    #viewport {
+        border-right: 2px solid black;
+        height: 600px;
+        overflow-y: auto;
+        overflow-x: none;
+        img {
+            height: 150px;
+        }
+    }
+    .subsecs {
+        .listofPledges {
+            overflow-y: hidden;
+            ul {
+                padding-left: 2%;
+                @extend %inlineBox;
+                li {
+                    position: relative;
+                    list-style: none;
+                    @include marginLR(2%);
+                }
+                li:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
+        h1 {
+            text-align: center;
+        }
+    } 
 }

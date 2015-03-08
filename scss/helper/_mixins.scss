@@ -20,6 +20,10 @@
     padding-top: $same;
     padding-bottom: $same;
 }
+@mixin marginLR($same) {
+     margin-left: $same;
+    margin-right: $same;
+}
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
