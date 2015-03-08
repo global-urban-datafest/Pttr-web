@@ -1,25 +1,29 @@
 .login {
     h1 {
         text-align: center;
+        margin-bottom: 5%;
     }
-    p, li {
-        text-align: justify;
-        color: #1E5699;
-        margin-bottom: 10px;
+    .txt_blk {
+        @include paddingLR(7%);
+        p, li {
+            text-align: justify;
+            color: #1E5699;
+            margin-bottom: 10px;
+        }
     }
     input[text], textarea {
         margin-bottom: 20px;
     }
     .btn {
-            background-color: #1E5699;
-            color: #DBE9EE;
-            margin-top:10%;
-            margin-bottom: 10%;
-        }
-        .btn:hover {
-            background-color: #2D81E5;
-            color: #EEF3F7;
-            margin-top:10%;
-            margin-bottom: 10%;
-        }
+        background-color: #1E5699;
+        color: #DBE9EE;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .btn:hover {
+        background-color: #2D81E5;
+        color: #EEF3F7;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 }

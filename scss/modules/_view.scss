@@ -28,5 +28,8 @@
             margin-bottom: 20px;
             resize: none;
         }
+        .col-sm-12{
+        @include paddingLR(20%);
+        }
     }
 }
