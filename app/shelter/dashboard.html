@@ -1,17 +1,18 @@
-<div class="dashboard">
+ <div class="dashboard">
         <div class="container-fluid">
+        <h1><span class="glyphicon glyphicon-tasks"></span> Shelter Dashboard</h1>
             <div class="row">
                 <div class="col-sm-8">
-                    <div class="search_blk">
-                        <label for="animal">Animal Name:</label>
-                        <input type="text" id="animal" ng-model="animal">
+                    <div class="search_blk center-block">
+                        <label for="animal">Animal Name</label>
+                        <input type="text" id="animal" ng-model="animal" placeholder="Enter Animal Name">
                         <label for="type">Animal Type</label>
-                        <input type="text" id="type" ng-model="animal">
+                        <input type="text" id="type" ng-model="animal" placeholder="Enter Animal Type">
                         <button class="btn btn-md">Search</button>
                     </div>
                     <div id="viewport">
                         <div class="row">
-                            <div class="col-sm-3 wow zoomIn" ng-repeat="animal in animal">
+                            <div class="col-sm-3 " ng-repeat="animal in animal">
                                 <div class="thumbnail ">
                                     <img class="img-rounded" src="img/thumbnail-3.jpg">
                                     <div class="caption text-center">
@@ -20,12 +21,14 @@
                                         <p>
                                             {{animal.description}}
                                         </p>
-                                        <p>      
+                                        <p>
                                             <a href="#" class="btn btn-default" role="button">Edit</a>
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -34,7 +37,7 @@
                         <div class="col-sm-12">
                             <div class="subsecs">
                                 <div class="sub_sectTitle">
-                                    <h3>List of Pledges</h3>
+                                    <h3><span class="glyphicon glyphicon-flag"></span> List of Pledges</h3>
                                 </div>
                                 <hr>
                                 <div class="listofPledges">
@@ -44,6 +47,7 @@
                                             <h5>{{pledgetype}}</h5>
                                             <h5>{{pledgeamount}}</h5>
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -53,7 +57,7 @@
                         <div class="col-sm-12">
                             <div class="subsecs">
                                 <div class="sub_sectTitle">
-                                    <h3>List of Possible Adoptors</h3>
+                                    <h3><span class="glyphicon glyphicon-list"></span> List of Possible Adoptors</h3>
                                 </div>
                                 <hr>
                                 <div class="listofPledges">
@@ -63,6 +67,7 @@
                                             <h5>{{AnimalName}}</h5>
                                             <h5>{{AnimalType}}</h5>
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>

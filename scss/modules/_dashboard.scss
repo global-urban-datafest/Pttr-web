@@ -1,4 +1,13 @@
 .dashboard {
+    .search_blk {
+    text-align:center;
+        input{
+            @include border-radius(3px);
+            border: 1px solid #333;
+            margin-right: 5%;
+            padding: 1px 3px;
+        }
+    }
     div.liked {
         .btn:first-child {
             background-color: #EE2B31;
@@ -51,8 +60,23 @@
                 }
             }
         }
-        h1 {
-            text-align: center;
-        }
-    } 
+    }
+    h1 {
+        text-align: center;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow:  0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        width: 8px;
+        border:1px solid #333;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        background-color:#1E5699;
+        width: 8px;
+    }
 }
