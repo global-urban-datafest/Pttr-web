@@ -1,110 +1,52 @@
 <div class="view">
-    <nav navigation class="navbar navbar-inverse navCust">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Pttr</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a>
+        <div class="container profileSettings">
+        <h1>Profile Information</h1>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                    <h5>Why should you fill this out?</h5>
+                    <p>
+                    <li>
+                        It is important for individuals and animal shelters to know a some of little bit about yourself before allowing you to adopt a pet of choice from their animal shelter.
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+                    <li>
+                        This information is useful in order for nearby shelters that are selected based on your geolocation to select individuals who they see fit and appeal to the dogs up for adoption.
                     </li>
-                    <li><a href="#">Page 2</a>
+                    <li>
+                        Animal Shelters also are signed up to Pttr and provide information about their shelter. Shelter information that is provided will tell you what animals they have up for adoption, if they accept donations.
                     </li>
-                    <li><a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                    <h4><img src="images/profileSettings.jpg"></h4>
+                    </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address">
+                        </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="img_blk">
-                    <h2>Profile</h2>
-                    <img src="images/sad_dog.jpg" class="img-responsive center-block" alt="">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="fname">FirstName:</label>
-                            <input disabled="{{isDisabled}}" hide type="text" id="fname" placeholder="FirstName:">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="lname">LastName:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="lname" placeholder="LastName:">
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number">
                         </div>
+
+                        <div class="form-group">
+                            <label for="biography">Biography</label>
+                            <textarea class="form-control" name="biography" id="biography" placeholder="Tell us about yourself..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="button" class="btn btn-default">Edit</button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="addr_blk">
-                            <label for="address">Address:</label>
-                            <textarea disabled="{{isDisabled}}" name="" id="address" placeholder="Address:" maxlength="140"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div id="bio_blk">
-                    <label for="userbio">Biography:</label>
-                    <textarea disabled="{{isDisabled}}" name="" id="userbio" rows="5" placeholder="Biography:" maxlength="250"></textarea>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="input_blk">
-                            <label for="city">City:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="city" placeholder="City:">
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="input_blk">
-                            <label for="state">State:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="state" placeholder="State:">
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="input_blk">
-                            <label for="zip">Zipcode:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="zip" placeholder="Zip:">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="email">Email:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="email" placeholder="Email:">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="phone">Phone:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="phone" placeholder="Phone:">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="btn_blk">
-            <button class="btn btn-lg" ngClick()>Edit</button>
-            <button class="btn btn-lg" ngClick()>Save</button>
+            </form>
         </div>
     </div>
-</div>
