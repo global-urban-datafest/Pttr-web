@@ -63,7 +63,7 @@
                     }
                 ).then(
                     function () {
-                        if (angular.isObject(user.firebaseRef)) {
+                        if (angular.isObject(user.firebaseRef) && user.firebaseRef !== null) {
                             deferred.resolve('Succesfully logged in.');
                         } else {
                             deferred.reject('That user was found in our authentication system but not in our site tree. Contradiction.');
