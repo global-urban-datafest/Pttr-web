@@ -3,9 +3,19 @@
     
     var angular = window.angular;
     
-    angular.module('pttr.userEntity').controller('CreateCtrl', ['$scope', '$routeParams', 'AuthService', function ($scope, $routeParams, AuthService) {
+    angular.module('pttr.userEntity').controller('CreateCtrl', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
         
-        $scope.create = {};
+        $scope.create = {
+            data: {
+                name: "",
+                email: "",
+                password: "",
+                address: "",
+                phone: ""
+            }
+        };
+        
+        var loginType = $location.path().split("/")[2]; 
         
         $scope.create.submit = function () {
             if ($scope.create.status) {
