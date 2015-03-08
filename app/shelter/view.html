@@ -1,6 +1,6 @@
- <div class="view">
+    <div class="view">
         <div class="container profileSettings">
-            <h1><span class="glyphicon glyphicon-cog"></span> Profile Information</h1>
+            <h1> <span class="glyphicon glyphicon-cog"></span> Profile Information</h1>
             <form>
                 <div class="row">
                     <div class="col-sm-6">
@@ -17,7 +17,7 @@
                         <img class="center-block" src="images/safety.png">
 
                     </div>
-                    <div class="col-sm-6" ng-init="isDisable=false">
+                    <div class="col-sm-3" ng-init="isDisable=false">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
@@ -27,6 +27,8 @@
                             <input disable="{{isDisable}}" type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address" ng-model="edit.data.address">
                         </div>
 
+                    </div>
+                    <div class="col-sm-3">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="email" name="email" placeholder="Enter Email" ng-model="edit.data.email">
@@ -34,6 +36,14 @@
                         <div class="form-group">
                             <label for="phone">Phone</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" ng-model="edit.data.phone">
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="biography">Biography</label>
+                            <textarea disable="{{isDisable}}" class="form-control" name="biography" id="biography" placeholder="Tell us about yourself..." ng-model="edit.data.biography" maxlength="140"></textarea>
                         </div>
                         <div class="btn_blk">
                             <button ng-submit() class="btn btn-lg">Save</button>

@@ -6,6 +6,7 @@
         li{
             margin-bottom:15px;
             text-align:justify;
+            color:#1E5699;
         }
         .btn_blk {
             display: flex;
@@ -34,6 +35,9 @@
         }
         .col-sm-12{
         @include paddingLR(20%);
+        }
+        img{
+        margin-bottom:50px;
         }
     }
 }
