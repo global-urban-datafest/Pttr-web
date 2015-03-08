@@ -8,14 +8,38 @@
     <link rel="stylesheet" type="text/css" href="css/format.css">
     <script src="bower_components/Bootflat/js/jquery-1.10.1.min.js"></script>
     <script src="bower_components/Bootflat/js/bootstrap.min.js"></script>
-    
+
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
     <script src="app/main/config.js"></script>
 </head>
 
 <body ng-app="pttr">
-    
+    <div class="dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- change the name of the animal to whatever you want -->
+                <!-- classes to use are in _dashboard .liked  LET KENNY TAKE CARE OF COLOR!!!! -->
+                <div class="col-sm-3 wow zoomIn" ng-repeat="animal in animal">
+                    <div class="thumbnail ">
+                        <img class="img-rounded" src="img/thumbnail-3.jpg">
+                        <div class="caption text-center">
+                            <h2>{{animal.name}}</h2>
+                            <h3>{{animal.type}}</h3>
+                            <p>
+                                {{animal.description}}
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-default liked" role="button">Like</a>
+                                <a href="#" class="btn btn-default" role="button">Adopt</a>
+                                <a href="#" class="btn btn-default" role="button">View</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footCust clearfix">
         <h4>Pttr</h4>
         <ul class="listLeft">
