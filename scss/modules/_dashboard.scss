@@ -3,14 +3,14 @@
         .btn:first-child {
             background-color: #EE2B31;
         }
-    } 
+    }
     img {
         height: 250px;
         border-radius: 10px/30px;
     }
     .thumbnail {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        margin-bottom: 45px; 
+        margin-bottom: 45px;
         border-radius: 10px/30px;
         background-color: white;
     }
@@ -21,5 +21,35 @@
     .btn:hover {
         background-color: #1E5699;
         color: #F2F2F2;
+    }
+    .search_blk {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    #viewport {
+        border-right:2px solid black;
+        height: 600px;
+        overflow-y: auto;
+        overflow-x: none;
+        img {
+            height: 150px;
+        }
+    }
+    .subsecs {        
+        .listofPledges {
+            overflow-y: hidden;
+            ul {
+                padding-left: 2%;
+                @extend %inlineBox;
+                li {
+                    position: relative;
+                    list-style: none;
+                    @include marginLR(2%);
+                }
+                li:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
     }
 }
