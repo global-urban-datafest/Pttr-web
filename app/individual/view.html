@@ -1,53 +1,46 @@
-<div class="container view">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="img_blk">
-                    <img src="images/sad_dog.jpg" class="img-responsive center-block" alt="">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="input_blk">
-                            <label for="name">Name:</label>
-                            <input disabled="{{isDisabled}}" type="text" id="name" placeholder="Name:" ng-model="individual.name">
+<div class="view">
+        <div class="container">
+            <div class="row">                
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="input_blk">
+                                <label for="name">Name:</label>
+                                <input disabled="{{isDisabled}}" type="text" id="name" placeholder="Name:" ng-model="individual.name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="addr_blk">
+                                <label for="address">Address:</label>
+                                <textarea disabled="{{isDisabled}}" name="address" id="address" placeholder="Address:" maxlength="140"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input_blk">
+                                <label for="email">Email:</label>
+                                <input disabled="{{isDisabled}}" type="email" id="email" placeholder="Email:">
+                            </div>
+                            <div class="input_blk">
+                                <label for="phone">Phone:</label>
+                                <input disabled="{{isDisabled}}" type="tel" id="phone" placeholder="Phone:">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="addr_blk">
-                            <label for="address">Address:</label>
-                            <textarea disabled="{{isDisabled}}" name="address" id="address" placeholder="Address:" maxlength="140"></textarea>
-                        </div>
+                <div class="col-sm-6">
+                    <div id="bio_blk">
+                        <label for="userbio">Biography:</label>
+                        <textarea disabled="{{isDisabled}}" name="userbio" id="userbio" rows="5" placeholder="Biography:" maxlength="250"></textarea>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div id="bio_blk">
-                    <label for="userbio">Biography:</label>
-                    <textarea disabled="{{isDisabled}}" name="userbio" id="userbio" rows="5" placeholder="Biography:" maxlength="250"></textarea>
-                </div>
+            <div class="btn_blk">
+                <button class="btn btn-lg" ngClick(isDisabled())>Edit</button>
+                <button class="btn btn-lg" ngClick(isDisabled())>Save</button>
             </div>
-            <div class="col-sm-6" id="user_info2">               
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input_blk">
-                            <label for="email">Email:</label>
-                            <input disabled="{{isDisabled}}" type="email" id="email" placeholder="Email:">
-                        </div>
-                        <div class="input_blk">
-                            <label for="phone">Phone:</label>
-                            <input disabled="{{isDisabled}}" type="tel" id="phone" placeholder="Phone:">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="btn_blk">
-            <button class="btn btn-lg" ngClick(isDisabled())>Edit</button>
-            <button class="btn btn-lg" ngClick(isDisabled())>Save</button>
         </div>
     </div>

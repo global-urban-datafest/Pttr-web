@@ -1,8 +1,4 @@
 .view {
-    padding-top: 10%;
-    .input_blk {
-        @include paddingLR(5%);
-    }
     label{
         margin-right:10px;
     }
@@ -13,18 +9,11 @@
             resize: none;
         }
         width:100%;
-        padding-top: 10%;
     }
     .btn_blk {
         margin-top: 5%;
     }
-    .col-sm-12 {
-        .input_blk {
-            display: flex;
-            justify-content: center;
-        }
-        @include paddingLR(15%);
-    }
+    
     #user_info2{
         padding-top:10%;
     }
