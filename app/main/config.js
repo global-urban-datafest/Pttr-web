@@ -3,7 +3,7 @@
 
     var angular = window.angular,
         app = angular.module('pttr', ['ui.router', 'ui.bootstrap', 'ngRoute', 'firebase', 'pttr.firebaseRef',
-                                      'pttr.userEntity', 'pttr.shelter', 'pttr.individual']);
+                                      'pttr.userEntity', 'pttr.shelter', 'pttr.animal', 'pttr.individual']);
 
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
@@ -37,6 +37,7 @@
             if (stateNamingSplit[0] === "shelterAuth" &&
                     ((AuthService.getUser() && AuthService.getUser().type !== "shelter") || !AuthService.getUser().hasOwnProperty('type'))) {
                 event.preventDefault();
+                console.log('not shelter');
             }
         });
 
@@ -101,12 +102,12 @@
                 templateUrl: "app/userEntity/menuIndividual.html"
             })
             .state('individualAuth.dashboard', {
-                url: "/dashboard",
+                url: "/dashboard/individual",
                 templateUrl: "app/individual/dashboard.html",
                 controller: "DashboardIndividualCtrl"
             })
             .state('individualAuth.editProfile', {
-                url: "/profile/edit",
+                url: "/edit/individual",
                 templateUrl: "app/individual/view.html",
                 controller: "EditIndividualCtrl"
             });
@@ -118,12 +119,12 @@
                 templateUrl: "app/userEntity/menuShelter.html"
             })
             .state('shelterAuth.dashboard', {
-                url: "/dashboard",
+                url: "/dashboard/shelter",
                 templateUrl: "app/shelter/dashboard.html",
                 controller: "DashboardShelterCtrl"
             })
             .state('shelterAuth.editProfile', {
-                url: "/profile/edit",
+                url: "/edit/shelter",
                 templateUrl: "app/shelter/view.html",
                 controller: "EditIndividualCtrl"
             });

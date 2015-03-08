@@ -15,6 +15,7 @@
         
         $scope.userActions.logout = function () {
             AuthService.logout();
+            $state.go('noAuth.home');
         };
         
         $scope.userActions.editProfile = function () {

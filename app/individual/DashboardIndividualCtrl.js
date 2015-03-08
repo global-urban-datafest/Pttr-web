@@ -3,7 +3,7 @@
     
     var angular = window.angular;
     
-    angular.module('pttr.individual').controller('DashboardIndividualCtrl', ['$scope', function ($scope) {
+    angular.module('pttr.individual').controller('DashboardIndividualCtrl', ['$scope', 'AnimalService', function ($scope, AnimalService) {
         $scope.liked = false;
         $scope.animals = [
         	{
@@ -53,6 +53,8 @@
         	}
 
         ]
+        
+        
        
         // var viewAnimal = function(name,type){
 
