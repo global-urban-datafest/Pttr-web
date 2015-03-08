@@ -3,7 +3,7 @@
         margin-right:10px;
     }
     #bio_blk, #addr_blk {
-        textarea {
+        textarea { 
             width: 100%;
             @extend %border_box;
             resize: none;
