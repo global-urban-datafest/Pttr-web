@@ -172,16 +172,15 @@ navCust {
 .footCust {
     background-color: #1E5699;
     color: #EEF3F7;
-    width:100% div {
-        position: relative;
-        display: inline-block;
+    @include paddingTB(2%);
+
+    .txt_blk {
+        margin-top:10%;
+        p {
+            text-align: center;
+        }
     }
-    p {
-        margin: 0;
-    }
-    .center {
-        text-align: center;
-        bottom: 0;
-        height: 100%;
+    li {
+        list-style: none;
     }
 }
