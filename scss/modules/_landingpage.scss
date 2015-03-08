@@ -144,10 +144,6 @@ section {
 navCust {
     margin-botton: 0;
 }
-.footCust {
-    background-color: #1E5699;
-    color: #CEDBF0;
-}
 .indButton {
     background-color: white;
     color: #1E5699;
@@ -163,25 +159,40 @@ navCust {
 .right {
     background-color: white;
 }
-.listLeft {
-    list-style: none;
-    margin: 10px 10px;
-    display: inline-block;
-    float: left;
-}
+
 .logo {
     height: 100px;
     width: 100px;
 }
-.listRight {
-    margin: 10px 10px;
-    list-style: none;
-    display: inline-block;
-    float: right;
-}
+
 #signUp {
     min-height: 300px;
 }
 .containerPttr {
     overflow: none;
 }
+.footCust{
+ background-color:#1E5699;
+ color:#EEF3F7;
+ width:100%
+ div{
+    position:relative;
+    display:inline-block;
+ }
+ p{
+    margin:0;
+ }
+ .center{
+    text-align:center;
+    bottom:0;
+    height:100%;
+ }
+}
+
+
+
+
+
+
+
+

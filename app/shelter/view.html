@@ -1,9 +1,23 @@
-<div class="view">
+    <div class="view">
         <div class="container profileSettings">
-            <h1>Profile Information</h1>
+            <h1> <span class="glyphicon glyphicon-cog"></span> Profile Information</h1>
             <form>
                 <div class="row">
-                    <div class="col-sm-6" ng-init="isDisable=false">
+                    <div class="col-sm-6">
+                        <h4 class="">Your Sensitive Information</h4>
+                        <li>
+                            The Information that you provide to us is sensitive. Pttr is committed to your privacy and we take extreme precautions to protect your information.
+                        </li>
+                        <li>
+                            We do not under any circumstances sell your information or give it away to any third parties who collect this type of sensitive information.
+                        </li>
+                        <li>
+                            Alway ensure that you only provide information of this type to websites that you trust. There are many malicious sites out there that soley go after this information.
+                        </li>
+                        <img class="center-block" src="images/safety.png">
+
+                    </div>
+                    <div class="col-sm-3" ng-init="isDisable=false">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="name" name="name" placeholder="Enter Fullname" ng-model="edit.data.name">
@@ -12,12 +26,9 @@
                             <label for="address">Address</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="address" name="address" placeholder="Enter Your Address" ng-model="edit.data.address">
                         </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input disable="{{isDisable}}" type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" ng-model="edit.data.password">
-                        </div>
+
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input disable="{{isDisable}}" type="text" class="form-control" id="email" name="email" placeholder="Enter Email" ng-model="edit.data.email">
@@ -27,11 +38,18 @@
                             <input disable="{{isDisable}}" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" ng-model="edit.data.phone">
                         </div>
 
+
                     </div>
-                </div>
-                <div class="btn_blk">
-                    <button ng-submit() class="btn btn-lg">Save</button>
-                    <button ng-submit() class="btn btn-lg">Edit</button>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="biography">Biography</label>
+                            <textarea disable="{{isDisable}}" class="form-control" name="biography" id="biography" placeholder="Tell us about yourself..." ng-model="edit.data.biography" maxlength="140"></textarea>
+                        </div>
+                        <div class="btn_blk">
+                            <button ng-submit() class="btn btn-lg">Save</button>
+                            <button ng-submit() class="btn btn-lg">Edit</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
