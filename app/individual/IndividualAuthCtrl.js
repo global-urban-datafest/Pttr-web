@@ -7,6 +7,12 @@
         
         $scope.userActions = {};
         
+        AuthService.login().then(
+            function () {
+                console.log(AuthService.isLoggedIn());
+            }
+        );
+        
         $scope.userActions.logout = function () {
             AuthService.logout();
         };
