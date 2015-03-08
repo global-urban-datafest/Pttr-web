@@ -24,6 +24,26 @@
         
         /**
             @memberof AuthService
+            @description Saves provided dataObject as a browser session
+            @private
+        */
+        function persistSession(dataObject) {
+            if (angular.isObject(dataObject)) {
+                window.sessionStorage.setItem('authData', window.JSON.stringify(dataObject));
+            }
+        }
+        
+        /**
+            @memberof AuthService
+            @description Retrives currently saved session
+            @private
+        */
+        function getSession(dataObject) {
+            return window.JSON.parse(window.sessionStorage.getItem('authData')) || {};
+        }
+        
+        /**
+            @memberof AuthService
             @description Helper function that logs in a user of a specific type
             @returns {HttpPromise} Promise resolved on success, rejected on failure
             @private
@@ -56,6 +76,11 @@
                         } else if (type === "shelter") {
                             user.firebaseRef = $firebaseObject(FirebaseRefFactory.child('shelters/' + authData.uid));
                         }
+                        persistSession({
+                            email: email,
+                            password: password,
+                            type: type
+                        });
                         return user.firebaseRef.$loaded();
                     },
                     function (error) {
@@ -63,7 +88,7 @@
                     }
                 ).then(
                     function () {
-                        if (angular.isObject(user.firebaseRef)) {
+                        if (angular.isObject(user.firebaseRef) && user.firebaseRef !== null) {
                             deferred.resolve('Succesfully logged in.');
                         } else {
                             deferred.reject('That user was found in our authentication system but not in our site tree. Contradiction.');
@@ -135,6 +160,16 @@
         
         /**
             @memberof AuthService
+            @description Logs in a user if there is a session stored
+            @returns {HttpPromise} Promise as resolved or rejected by login() private function
+        */
+        this.login = function () {
+            var storedUser = getSession();
+            return login(storedUser.email, storedUser.password, storedUser.type);
+        };
+        
+        /**
+            @memberof AuthService
             @description Logs out the currently logged in user
         */
         this.logout = function () {
@@ -171,9 +206,6 @@
             @returns {Object|Null} Object if a user is logged in, Null if not
         */
         this.getUser = function () {
-            if (user.email === null || user.firebaseRef === null || user.type === null) {
-                return null;
-            }
             return user;
         };
         

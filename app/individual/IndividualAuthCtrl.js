@@ -6,14 +6,19 @@
     angular.module('pttr.individual').controller('IndividualAuthCtrl', ['$state', '$scope', 'AuthService', function ($state, $scope, AuthService) {
         
         $scope.userActions = {};
-        var userId = AuthService.getUser();
+        
+        AuthService.login().then(
+            function () {
+                console.log(AuthService.isLoggedIn());
+            }
+        );
         
         $scope.userActions.logout = function () {
-              AuthService.logout();
+            AuthService.logout();
         };
         
         $scope.userActions.editProfile = function () {
-            $state.go('individualAuth.editProfile');    
+            $state.go('individualAuth.editProfile');
         };
         
         $scope.userActions.saveProfile = function () {

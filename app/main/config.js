@@ -1,30 +1,49 @@
 (function (window) {
     'use strict';
-    
+
     var angular = window.angular,
         app = angular.module('pttr', ['ui.router', 'ui.bootstrap', 'ngRoute', 'firebase', 'pttr.firebaseRef',
                                       'pttr.userEntity', 'pttr.shelter', 'pttr.individual']);
-    
+
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
+        AuthService.login().then(function () {
+            // Based on the logged in state of the user, redirect him/her to appropriate starting page
+            if (AuthService.isLoggedIn()) {
+                if (AuthService.getUser().type === "individual") {
+                    $state.go('individualAuth.dashboard');
+                } else if (AuthService.getUser().type === "shelter") {
+                    $state.go('shelterAuth.dashboard');
+                }
+            }
+
+        }, function () {
+            $state.go('noAuth.home');
+        });
+        
         $rootScope.$on("$stateChangeStart", function (event, toState, toParams) {
             var stateNamingSplit = toState.name.split(".");
+            // NoAuth route but user is logged in and wants to access such routes. Stop them!
             if (stateNamingSplit[0] === "noAuth" && AuthService.getUser() &&
                     (AuthService.getUser().type === "individual" || AuthService.getUser().type === "shelter")) {
                 event.preventDefault();
             }
-            if (stateNamingSplit[0] === "individualAuth" && AuthService.getUser() && AuthService.getUser().type !== "individual") {
+            // individualAuth route but user is not an individual. Stop them!
+            if (stateNamingSplit[0] === "individualAuth" &&
+                    ((AuthService.getUser() && AuthService.getUser().type !== "individual") || !AuthService.getUser().hasOwnProperty('type'))) {
                 event.preventDefault();
             }
-            if (stateNamingSplit[0] === "shelterAuth" && AuthService.getUser() && AuthService.getUser().type !== "shelter") {
+            // shelter route but user is not a shelter. Stop Them
+            if (stateNamingSplit[0] === "shelterAuth" &&
+                    ((AuthService.getUser() && AuthService.getUser().type !== "shelter") || !AuthService.getUser().hasOwnProperty('type'))) {
                 event.preventDefault();
             }
         });
-        
+
     }]);
-    
+
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        
+
         $stateProvider
             .state('noAuth', {
                 abstract: true,
@@ -73,8 +92,8 @@
                 templateUrl: "app/dog/view.html",
                 controller: "ViewDogCtrl"
             });
-            
-        
+
+
         $stateProvider
             .state('individualAuth', {
                 abstract: true,
@@ -91,7 +110,7 @@
                 templateUrl: "app/individual/view.html",
                 controller: "EditIndividualCtrl"
             });
-        
+
         $stateProvider
             .state('shelterAuth', {
                 abstract: true,
@@ -108,9 +127,9 @@
                 templateUrl: "app/shelter/view.html",
                 controller: "EditIndividualCtrl"
             });
-        
+
         $urlRouterProvider.otherwise('/home');
-            
+
     }]);
-    
+
 }(window));
