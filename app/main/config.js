@@ -2,12 +2,18 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ui.router']);
+        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity']);
     
-    app.run(['$rootScope', '$state', function ($rootScope, $state) {
+    app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
         $rootScope.$on("$stateChangeStart", function (event, toState, toParams) {
-            
+            var stateNamingSplit = toState.name.split(".");
+            if (stateNamingSplit[0] === "individualAuth" && AuthService.getUser() && AuthService.getUser().type !== "individual") {
+                event.preventDefault();
+            }
+            if (stateNamingSplit[0] === "shelterAuth" && AuthService.getUser() && AuthService.getUser().type !== "shelter") {
+                event.preventDefault();
+            }
         });
         
     }]);
@@ -50,7 +56,7 @@
             .state('noAuth.viewIndividual', {
                 url: "/view/individual/:individualId",
                 templateUrl: "app/individual/view.html",
-                controller: "ViewProfileCtrl"
+                controller: "ViewIndividualCtrl"
             })
             .state('noAuth.viewShelter', {
                 url: "/view/shelter/:shelterId",
