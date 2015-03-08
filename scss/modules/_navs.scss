@@ -9,6 +9,11 @@
     .navbar-right {
         @include paddingTB(2%);
     }
+    .navbar-header{
+    	a{
+    	    padding-top: 4.8%;
+    	}
+    }
 }
 @media only screen and (min-width: 1000px) {
     .nvclass {
@@ -18,15 +23,15 @@
             a.navbar-brand {
                 float: right;
                 position: absolute;
-                right: 0;
-                top: 30px;
+                left: 50px;
+                top: 2px;
             }
         }
         .navbar-right ul.nav {
             margin-right: 50px;
         }
         .navbar-right {
-            @include paddingTB(1%);
+            @include paddingTB(1.5%);
         }
     }
 }
