@@ -2,7 +2,7 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity']);
+        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity', 'pttr.shelter']);
     
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
