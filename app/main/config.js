@@ -2,7 +2,7 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity']);
+        app = angular.module('pttr', ['ui.router', 'firebase', 'firebaseRef', 'pttr.userEntity', 'pttr.shelter']);
     
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
@@ -34,24 +34,24 @@
                 templateUrl: "app/main/contact.html"
             })
             .state('noAuth.loginIndividual', {
-                url: "/login/individual",
+                url: "/login?type=individual",
                 templateUrl: "app/userEntity/loginIndividual.html",
-                controller: "LoginIndividualCtrl"
+                controller: "LoginCtrl"
             })
             .state('noAuth.loginShelter', {
-                url: "/login/shelter",
+                url: "/login?type=shelter",
                 templateUrl: "app/userEntity/loginShelter.html",
-                controller: "LoginShelterCtrl"
+                controller: "LoginCtrl"
             })
             .state('noAuth.createIndividual', {
-                url: "/create/individual",
+                url: "/create?type=individual",
                 templateUrl: "app/userEntity/createIndividual.html",
-                controller: "CreateIndividualCtrl"
+                controller: "CreateCtrl"
             })
             .state('noAuth.createShelter', {
-                url: "/create/shelter",
+                url: "/create?type=shelter",
                 templateUrl: "app/userEntity/createShelter.html",
-                controller: "CreateShelterCtrl"
+                controller: "CreateCtrl"
             })
             .state('noAuth.viewIndividual', {
                 url: "/view/individual/:individualId",

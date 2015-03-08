@@ -75,10 +75,14 @@
             @returns {HttpPromise} Promise resolved on success, rejected on failure
             @private
         */
-        function register(email, password, registrationInfo, type) {
+        function register(registrationInfo, type) {
             var deferred = $q.defer();
-            if (!email || !password) {
-                deferred.reject('An email and/or password must be provided to create an account.');
+            if (!registrationInfo.email ||
+                    !registrationInfo.password ||
+                    !registrationInfo.name ||
+                    !registrationInfo.address ||
+                    !registrationInfo.phone) {
+                deferred.reject('Email, Password, Name, Address and Phone are required for creating an account.');
             }
             if (!type || !angular.isString(type)) {
                 deferred.reject('User type was not provided.');
@@ -86,19 +90,16 @@
             if (type !== "individual" && type !== "shelter") {
                 deferred.reject('User type was not valid.');
             }
-            if (!registrationInfo.name || !registrationInfo.address || !registrationInfo.phone) {
-                deferred.reject('Registration Information not present');
-            }
             $firebaseAuth(FirebaseRefFactory)
                 .$createUser({
-                    email: email,
-                    password: password
+                    email: registrationInfo.email,
+                    password: registrationInfo.password
                 }).then(function (userData) {
                     var accountObject = {};
                     accountObject[userData.uid] = {
                         name: registrationInfo.name,
                         address: registrationInfo.address,
-                        email: email,
+                        email: registrationInfo.email,
                         phone: registrationInfo.phone
                     };
                     if (type === "individual") {
