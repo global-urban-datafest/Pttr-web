@@ -4,6 +4,7 @@
     var angular = window.angular;
     
     angular.module('pttr.individual').controller('DashboardIndividualCtrl', ['$scope', function ($scope) {
+        $scope.liked = false;
         $scope.animals = [
         	{
         		name: "monkey",
@@ -52,8 +53,9 @@
         	}
 
         ]
+       
         // var viewAnimal = function(name,type){
-        	
+
         // };
     }]);
     
