@@ -4,7 +4,7 @@
     var angular = window.angular,
         Firebase = window.Firebase;
     
-    angular.module('firebaseRef').factory('FirebaseRefFactory', [function () {
+    angular.module('pttr.firebaseRef').factory('FirebaseRefFactory', [function () {
        
         return new Firebase("https://pttr.firebaseio.com/");
         

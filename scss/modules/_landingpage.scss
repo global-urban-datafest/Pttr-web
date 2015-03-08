@@ -70,7 +70,7 @@ section {
 .header_blk {
     h1 {
         text-align: center;
-        text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 }
 #pttrInfo {
@@ -105,6 +105,14 @@ section {
         color: white;
     }
     .orgButton:hover {
+        background-color: #2D81E5;
+        color: white;
+    }
+    a:last-child {
+        background-color: white;
+        color: #1E5699;
+    }
+    a:last-child:hover {
         background-color: #2D81E5;
         color: white;
     }
@@ -144,14 +152,6 @@ section {
 navCust {
     margin-botton: 0;
 }
-.indButton {
-    background-color: white;
-    color: #1E5699;
-}
-.indButton:hover {
-    background-color: #2D81E5;
-    color: white;
-}
 .logo {
     height: 100px;
     width: 100px;
@@ -159,40 +159,28 @@ navCust {
 .right {
     background-color: white;
 }
-
 .logo {
     height: 100px;
     width: 100px;
 }
-
 #signUp {
     min-height: 300px;
 }
 .containerPttr {
     overflow: none;
 }
-.footCust{
- background-color:#1E5699;
- color:#EEF3F7;
- width:100%
- div{
-    position:relative;
-    display:inline-block;
- }
- p{
-    margin:0;
- }
- .center{
-    text-align:center;
-    bottom:0;
-    height:100%;
- }
+.footCust {
+    background-color: #1E5699;
+    color: #EEF3F7;
+    @include paddingTB(2%);
+
+    .txt_blk {
+        margin-top:10%;
+        p {
+            text-align: center;
+        }
+    }
+    li {
+        list-style: none;
+    }
 }
-
-
-
-
-
-
-
-

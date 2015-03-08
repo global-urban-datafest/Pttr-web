@@ -16,39 +16,48 @@
     <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
+    <script src="app/main/config.js"></script>
     <script src="app/firebaseRef/config.js"></script>
     <script src="app/firebaseRef/FirebaseRefFactory.js"></script>
-    <script src="app/main/config.js"></script>
     <script src="app/userEntity/config.js"></script>
     <script src="app/userEntity/AuthService.js"></script>
     <script src="app/userEntity/CreateCtrl.js"></script>
     <script src="app/userEntity/LoginCtrl.js"></script>
+    <script src="app/individual/config.js"></script>
+    <script src="app/individual/individualService.js"></script>
+    <script src="app/individual/IndividualAuthCtrl.js"></script>
+    <script src="app/individual/DashboardIndividualCtrl.js"></script>
     <script src="app/shelter/config.js"></script>
     <script src="app/shelter/ShelterService.js"></script>
+    <script src="app/shelter/ShelterAuthCtrl.js"></script>
+    <script src="app/shelter/DashboardShelterCtrl.js"></script>
 </head>
 
 <body ng-app="pttr">
     <ui-view></ui-view>
-    <footer class="footCust clearfix">
+    <footer class="footCust footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="listLeft pull-left">
-                        <p>Home</p>
-                        <p>Mission</p>
-                        <p>About</p>
+                        <ul>
+                            <li>Home</li>
+                            <li>Mission</li>
+                            <li>About</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-5">
-                <div class="center">
-                    <p class="center canter-block">Copyright &copy 2014 Pttr All Rights Reserved</p>
-                </div>
+                    <div class="txt_blk">
+                        <p>Copyright &copy 2014 Pttr All Rights Reserved</p>
+                    </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="listRight pull-right">
-                        <p>Facebook</p>
-                        <p>Instagram</p>
-                        <p>Twitter</p>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
                         </ul>
                     </div>
                 </div>

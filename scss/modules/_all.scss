@@ -6,5 +6,7 @@
 @import 'animate';
 body {
     overflow-x: hidden;
-    padding-top: 26px;
+    .view,.dashboard{
+    padding-top: 4%;
+    }    
 }

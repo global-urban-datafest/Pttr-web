@@ -3,6 +3,6 @@
     
     var angular = window.angular;
     
-    angular.module('pttr.firebaseRef', []);
+    angular.module('pttr.individual', []);
     
 }(window));

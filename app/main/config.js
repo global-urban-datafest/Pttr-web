@@ -2,12 +2,17 @@
     'use strict';
     
     var angular = window.angular,
-        app = angular.module('pttr', ['ui.router', 'ui.bootstrap', 'ngRoute', 'firebase', 'firebaseRef', 'pttr.userEntity', 'pttr.shelter']);
+        app = angular.module('pttr', ['ui.router', 'ui.bootstrap', 'ngRoute', 'firebase', 'pttr.firebaseRef',
+                                      'pttr.userEntity', 'pttr.shelter', 'pttr.individual']);
     
     app.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
 
         $rootScope.$on("$stateChangeStart", function (event, toState, toParams) {
             var stateNamingSplit = toState.name.split(".");
+            if (stateNamingSplit[0] === "noAuth" && AuthService.getUser() &&
+                    (AuthService.getUser().type === "individual" || AuthService.getUser().type === "shelter")) {
+                event.preventDefault();
+            }
             if (stateNamingSplit[0] === "individualAuth" && AuthService.getUser() && AuthService.getUser().type !== "individual") {
                 event.preventDefault();
             }
@@ -73,23 +78,35 @@
         $stateProvider
             .state('individualAuth', {
                 abstract: true,
+                controller: "IndividualAuthCtrl",
                 templateUrl: "app/userEntity/menuIndividual.html"
             })
             .state('individualAuth.dashboard', {
                 url: "/dashboard",
                 templateUrl: "app/individual/dashboard.html",
                 controller: "DashboardIndividualCtrl"
+            })
+            .state('individualAuth.editProfile', {
+                url: "/profile/edit",
+                templateUrl: "app/individual/view.html",
+                controller: "EditIndividualCtrl"
             });
         
         $stateProvider
             .state('shelterAuth', {
                 abstract: true,
+                controller: "ShelterAuthCtrl",
                 templateUrl: "app/userEntity/menuShelter.html"
             })
             .state('shelterAuth.dashboard', {
                 url: "/dashboard",
                 templateUrl: "app/shelter/dashboard.html",
                 controller: "DashboardShelterCtrl"
+            })
+            .state('shelterAuth.editProfile', {
+                url: "/profile/edit",
+                templateUrl: "app/shelter/view.html",
+                controller: "EditIndividualCtrl"
             });
         
         $urlRouterProvider.otherwise('/home');
